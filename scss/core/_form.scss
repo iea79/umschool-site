@@ -1,6 +1,7 @@
 .form {
 	&__row {
-		margin-bottom: 15px;
+		margin-bottom: 0.7em;
+		position: relative;
 
 		.btn,
 		input:not([type]),
@@ -21,9 +22,37 @@
 			max-width: 100%;
 			min-height: 15px;
 		}
+
+		i {
+			position: absolute;
+			left: 1.6em;
+			top: 50%;
+			color: $color_info;
+			transform: translate(-50%, -50%);
+			font-size: 1.3em;
+
+			@media (min-width: 768px) {
+				font-size: 1em;
+			}
+
+			&.icon_mail {
+				font-size: 1.1em;
+				left: 1.7em;
+
+				@media (min-width: 768px) {
+					font-size: 0.8em;
+					left: 2em;
+
+				}
+			}
+		}
 	}
 
-	&__label {}
+	&__title {}
+
+	&__sub {}
+
+	&__action {}
 }
 // Input text and textarea ================================================
 input:not([type]),
@@ -37,32 +66,39 @@ input[type=text],
 input[type=url],
 textarea {
 	background-color: $input_bg_color;
-	border: 1px solid $input_border_color;
-	padding: 6px 15px;
+	border: 0.063em solid $input_border_color;
+	color: $input_color;
+	padding: 1.5em 1em 1.5em 2.8em;
 	outline: none;
-	font-size: 16px;
-	font-weight: 300;
+	font-size: 1.3em;
+	font-weight: 400;
 	font-family: $main_font_family;
-	border-radius: 5px;
-	transition: all 0.3s;
+	border-radius: 0.938em;
+	transition: 0.3s;
+	transition-property: background-color border color;
+
+	@media (min-width: 768px) {
+		font-size: 0.938em;
+		padding: 1.5em 1em 1.5em 3.1em;
+	}
 
 	&:hover {
-		border: 1px solid $input_hover_border_color;
+		border: 0.063em solid $input_hover_border_color;
 		background-color: $input_hover_bg_color;
 	}
 
 	&:focus {
-		border: 1px solid $input_focus_border_color;
+		border: 0.063em solid $input_focus_border_color;
 		background-color: $input_focus_bg_color;
 	}
 
 	&.invalid {
 		background-color: #fff0f0;
-		border: 1px solid red;
+		border: 0.063em solid red;
 	}
 	// Placeholder for input +++++++++++++++
 	@include placeholder {
-		color: #ddd;
+		color: $input_placeholder_color;
 	}
 }
 

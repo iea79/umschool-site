@@ -2,9 +2,25 @@ header.header
     .header__content
         .header__left
             a.logo(href="/")
-                img(src="img/logo.png", alt="alt")
-        nav.header__right
-            ul.navbar
-                each navLink in [{name: 'Page1', href: ''},{name: 'Page2', href: ''},{name: 'Page3', href: ''},{name: 'Page4', href: ''},]
-                    li.navbar__item
-                        a.navbar__link(href= navLink.href)= navLink.name
+                img(src="img/logo.svg", alt="alt")
+                span.logo__text
+                    img(src="img/logo-text.svg", alt="")
+        .header__right
+            .callback
+                .desktop
+                    a.callback__phone(href="tel: 8 800 222 04 41") 
+                        i.icon_phone 
+                        |8 800 222 04 41
+                    .callback__link( data-toggle="modal" data-target="#callbackForm") Позвонить вам?
+                .mobile
+                    .header__action( data-toggle="modal" data-target="#callbackForm")
+                        i.icon_phone
+
+            .action
+                .desktop
+                    a.btn.btn_primary(href="#" data-toggle="modal" data-target="#free") Бесплатная неделя
+                    a.btn.btn_info(href="#") Войти
+                        i.icon_enter
+                .mobile
+                    .header__action
+                        i.icon_user

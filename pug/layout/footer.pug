@@ -1,6 +1,57 @@
 footer.footer
     .container_center
-        p
-        | &copy; 2016 |
-        i.fa.fa-github(aria-hidden='true') &nbsp;
-        a(href='#') View Source
+        .footer__top
+            .footer__left
+                a.logo(href=path )
+                    img(src=path + "img/logo.svg", alt="alt")
+                    span.logo__text
+                        img(src=path + "img/logo-text.svg", alt="")
+
+            .footer__nav
+                nav.nav
+                    .nav__col
+                        .nav__head Умскул
+                        ul.nav__list
+                            li.nav__item
+                                a.nav__link(href="#", target="_blank") Об Умскул
+                            li.nav__item
+                                a.nav__link(href="#", target="_blank") Вакансии
+                            li.nav__item
+                                a.nav__link(href="#", target="_blank") Отзывы
+                            li.nav__item
+                                a.nav__link(href="#", target="_blank") Личный кабинет
+                    .nav__col
+                        .nav__head Продукты
+                        ul.nav__list
+                            li.nav__item
+                                a.nav__link(href="#", target="_blank") УМ-Журнал
+                            li.nav__item
+                                a.nav__link(href="#", target="_blank") Умскул IOS
+                            li.nav__item
+                                a.nav__link(href="#", target="_blank") Умскул Android
+                            li.nav__item
+                                a.nav__link(href="#", target="_blank") Статьи
+                    .nav__col
+                        .nav__head Контакты
+                        ul.nav__list
+                            li.nav__item
+                                a.nav__link(href="#", target="_blank") Записаться на вводный урок
+                            li.nav__item
+                                a.nav__link(href="mailto: support@umschool.ru", target="_blank") support@umschool.ru
+                            li.nav__item
+                                a.nav__link(href="tel: 8 800 222 0441", target="_blank")
+                                    i.icon_phone 
+                                    b 8 800 222 0441
+            .footer__soc
+                .soc
+                    a.soc__link.soc__link_vk(href="#" target="_blank")
+                    a.soc__link.soc__link_youtube(href="#" target="_blank")
+                    a.soc__link.soc__link_insta(href="#" target="_blank")
+                    a.soc__link.soc__link_twitter(href="#" target="_blank")
+        .footer__bottom
+            .footer__info
+                span ИНН: 1655411677
+                span ОГРН: 1181690104188
+                a(href="#") Политика конфиденциальности
+                a(href="#") Договор оферты
+            .footer__copy © УМСКУЛ, 2020

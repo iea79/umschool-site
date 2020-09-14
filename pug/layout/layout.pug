@@ -1,15 +1,27 @@
--var version = '0.1';
+block variable
+    -var version = '0.9';
+    -var path = '';
 <!DOCTYPE html>
 html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Document
+        title УМСКУЛ
 
-        link(rel="stylesheet", type="text/css", href="css/style.css?"+version+"")
+        link(rel="apple-touch-icon" sizes="180x180" href=path + "img/fav/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href=path + "img/fav/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href=path + "img/fav/favicon-16x16.png")
+        link(rel="manifest" href=path + "img/fav/site.webmanifest")
+        link(rel="mask-icon" href=path + "img/fav/safari-pinned-tab.svg" color="#5bbad5")
+        meta(name="msapplication-TileColor" content="#da532c")
+        meta(name="theme-color" content="#ffffff")
+
+        link(rel="stylesheet", type="text/css", href=path + "css/style.css?"+version+"")
     body
-        include header.pug
+
+        if path !== '../'
+            include header.pug
 
         main.main_content
             block content

@@ -36,11 +36,43 @@ $(document).ready(function() {
 	});
 
     // Inputmask.js
-    // $('[name=tel]').inputmask("+9(999)999 99 99",{ showMaskOnHover: false });
-    // formSubmit();
+    $('[type=tel]').inputmask("+7(999)999 99 99",{ showMaskOnHover: false });
+    formSubmit();
+
+    if (!isXsWidth()) {
+        $('.scrollbar').scrollbar();
+    }
 
     // checkOnResize();
 
+    togglTabs();
+
+    $('.teachersSlider').slick({
+        dots: false,
+        arrows: false,
+        infinite: false,
+        fade: true,
+        // speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+
+    $('.teachersSlider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        $('.teachers__listItem').removeClass('active');
+        $('.teachers__listItem').eq(nextSlide).addClass('active');
+        // console.log($('.teachers__listItem').eq(nextSlide).offset());
+    });
+
+    $('.teachers__listItem').on('click', function() {
+        $('.teachers__listItem').not($(this)).removeClass('active');
+        $(this).addClass('active');
+        $('.teachersSlider').slick('goTo', $(this).index());
+    });
+
+    srollToId();
+    filterTeacher();
+    openProfList();
+    showMoreReviews();
 });
 
 $(window).resize(function(event) {
@@ -56,41 +88,147 @@ function checkOnResize() {
     // fontResize();
 }
 
-// Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
-function stikyMenu() {
-    let HeaderTop = $('header').offset().top + $('.home').innerHeight();
-    let currentTop = $(window).scrollTop();
+function showMoreReviews() {
+    $('.reviews__more .btn').on('click', function() {
+        $('.reviews__pane.active .reviews__item').show();
+        $(this).hide();
+    });
+}
 
-    setNavbarPosition();
+function filterTeacher() {
+    let classFilter = $('.teaching__tab');
+    let num = $('.teaching__tab.active').data('class');
+    let profFilter = $('.teaching__dropItem');
+    let profFilterCurrent = $('.teaching__current');
+    let prof = $('.teaching__dropItem.active').data('prof');
+    let teacher = $('.teachers__item');
+    let title = $('.teaching .section__title');
+    let titleText = 'Все преподаватели онлайн-школы «Умскул»';
+    let numTitle = "";
+    let profTitle = "";
 
-    $(window).scroll(function(){
-        setNavbarPosition();
+    classFilter.on('click', function() {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            // changeFilterData();
+        } else {
+            classFilter.removeClass('active');
+            $(this).addClass('active');
+        }
+        changeFilterData();
+        changeTitleText(numTitle, profTitle);
     });
 
-    function setNavbarPosition() {
-        currentTop = $(window).scrollTop();
+    profFilter.on('click tap', function() {
+        profFilter.removeClass('active');
+        $(this).addClass('active');
+        profFilterCurrent.text($(this).text());
+        changeFilterData();
+        changeTitleText(numTitle, profTitle);
+    });
 
-        if( currentTop > HeaderTop ) {
-            $('header').addClass('stiky');
-        } else {
-            $('header').removeClass('stiky');
-        }
+    function changeFilterData() {
+        num = $('.teaching__tab.active').data('class');
+        prof = $('.teaching__dropItem.active').data('prof');
+        numTitle = $('.teaching__tab.active').data('classTitle');
+        profTitle = $('.teaching__dropItem.active').data('profTitle');
 
-        $('.navbar__link').each(function(index, el) {
-            let section = $(this).attr('href');
+        // console.log(num);
+        // console.log(prof);
 
-            if ($('section').is(section)) {
-                let offset = $(section).offset().top;
+        teacher.hide();
 
-                if (offset <= currentTop && offset + $(section).innerHeight() > currentTop) {
-                    $(this).addClass('active');
+        teacher.each(function(index, el) {
+            if (prof == "all") {
+                if (typeof num !== 'undefined' && $(el).data('class') === num) {
+                    $(el).show();
                 } else {
-                    $(this).removeClass('active');
+                    $(el).show();
+                }
+            } else {
+                if ($(el).data('prof') === prof) {
+                    $(el).show();
+                }
+                if (typeof num !== 'undefined' && $(el).data('class') !== num) {
+                    $(el).hide();
                 }
             }
         });
+
     }
-};
+
+    function changeTitleText(num, prof) {
+        if (!num) {num = '';}
+        if (!prof) {prof = '';}
+
+        title.text('Все преподаватели ' + prof +' онлайн-школы «Умскул» ' + num);
+    }
+}
+
+function openProfList() {
+    let toggle = $('.choosen__current');
+    let wrap = $('.choosen__list');
+    let item = $('.choosen__listItem');
+
+    toggle.on('click tap', function() {
+        $(this).closest('.choosen__list').toggleClass('open');
+    });
+
+    item.on('click tap', function() {
+        $(this).closest('.choosen__list').toggleClass('open');
+        $(this).closest('.choosen__list').find('.choosen__current').text($(this).text());
+    });
+}
+
+function togglTabs() {
+    let tab = $('[data-tab]');
+
+    tab.on('click', function() {
+        let id = $(this).data('tab'),
+            wrapp = $(this).parent(),
+            tabs = wrapp.find('[data-tab]');
+        tabs.removeClass('active');
+        $(this).addClass('active');
+
+        $('#'+id).addClass('active').siblings().removeClass('active');
+    });
+}
+
+// Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
+// function stikyMenu() {
+//     let HeaderTop = $('header').offset().top + $('.home').innerHeight();
+//     let currentTop = $(window).scrollTop();
+//
+//     setNavbarPosition();
+//
+//     $(window).scroll(function(){
+//         setNavbarPosition();
+//     });
+//
+//     function setNavbarPosition() {
+//         currentTop = $(window).scrollTop();
+//
+//         if( currentTop > HeaderTop ) {
+//             $('header').addClass('stiky');
+//         } else {
+//             $('header').removeClass('stiky');
+//         }
+//
+//         $('.navbar__link').each(function(index, el) {
+//             let section = $(this).attr('href');
+//
+//             if ($('section').is(section)) {
+//                 let offset = $(section).offset().top;
+//
+//                 if (offset <= currentTop && offset + $(section).innerHeight() > currentTop) {
+//                     $(this).addClass('active');
+//                 } else {
+//                     $(this).removeClass('active');
+//                 }
+//             }
+//         });
+//     }
+// };
 
 function openMobileNav() {
     $('.navbar__toggle').on('click', function() {
@@ -149,7 +287,7 @@ function uploadYoutubeVideo() {
             $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
 
             // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
-            $(this).append($('<img src="img/play.svg" alt="Play" class="video__play">'));
+            $(this).append($('<img src="img/play-video.svg" alt="Play" class="video__play">'));
 
         });
 
@@ -173,7 +311,7 @@ function uploadYoutubeVideo() {
         });
     }
 };
-
+uploadYoutubeVideo();
 
 // Деление чисел на разряды Например из строки 10000 получаем 10 000
 // Использование: thousandSeparator(1000) или используем переменную.
@@ -215,72 +353,72 @@ function uploadYoutubeVideo() {
 // })
 
 // Простая проверка форм на заполненность и отправка аяксом
-// function formSubmit() {
-//     $("[type=submit]").on('click', function (e){
-//         e.preventDefault();
-//         var form = $(this).closest('.form');
-//         var url = form.attr('action');
-//         var form_data = form.serialize();
-//         var field = form.find('[required]');
-//         // console.log(form_data);
+function formSubmit() {
+    $("[type=submit]").on('click', function (e){
+        e.preventDefault();
+        var form = $(this).closest('.form');
+        var url = form.attr('action');
+        var form_data = form.serialize();
+        var field = form.find('[required]');
+        // console.log(form_data);
 
-//         empty = 0;
+        empty = 0;
 
-//         field.each(function() {
-//             if ($(this).val() == "") {
-//                 $(this).addClass('invalid');
-//                 // return false;
-//                 empty++;
-//             } else {
-//                 $(this).removeClass('invalid');
-//                 $(this).addClass('valid');
-//             }
-//         });
+        field.each(function() {
+            if ($(this).val() == "") {
+                $(this).addClass('invalid');
+                // return false;
+                empty++;
+            } else {
+                $(this).removeClass('invalid');
+                $(this).addClass('valid');
+            }
+        });
 
-//         // console.log(empty);
+        // console.log(empty);
 
-//         if (empty > 0) {
-//             return false;
-//         } else {
-//             $.ajax({
-//                 url: url,
-//                 type: "POST",
-//                 dataType: "html",
-//                 data: form_data,
-//                 success: function (response) {
-//                     // $('#success').modal('show');
-//                     // console.log('success');
-//                     console.log(response);
-//                     // console.log(data);
-//                     // document.location.href = "success.html";
-//                 },
-//                 error: function (response) {
-//                     // $('#success').modal('show');
-//                     // console.log('error');
-//                     console.log(response);
-//                 }
-//             });
-//         }
+        if (empty > 0) {
+            return false;
+        } else {
+            $.ajax({
+                url: url,
+                type: "POST",
+                dataType: "html",
+                data: form_data,
+                success: function (response) {
+                    // $('#success').modal('show');
+                    // console.log('success');
+                    console.log(response);
+                    // console.log(data);
+                    // document.location.href = "success.html";
+                },
+                error: function (response) {
+                    // $('#success').modal('show');
+                    // console.log('error');
+                    console.log(response);
+                }
+            });
+        }
 
-//     });
+    });
 
-//     $('[required]').on('blur', function() {
-//         if ($(this).val() != '') {
-//             $(this).removeClass('invalid');
-//         }
-//     });
+    $('[required]').on('blur', function() {
+        if ($(this).val() != '') {
+            $(this).removeClass('invalid');
+        }
+    });
 
-//     $('.form__privacy input').on('change', function(event) {
-//         event.preventDefault();
-//         var btn = $(this).closest('.form').find('.btn');
-//         if ($(this).prop('checked')) {
-//             btn.removeAttr('disabled');
-//             // console.log('checked');
-//         } else {
-//             btn.attr('disabled', true);
-//         }
-//     });
-// }
+    $('.form__privacy input').on('change', function(event) {
+        event.preventDefault();
+        var btn = $(this).closest('.form').find('.btn');
+        if ($(this).prop('checked')) {
+            btn.removeAttr('disabled');
+            // console.log('checked');
+        } else {
+            btn.attr('disabled', true);
+        }
+    });
+}
 
 
 // Проверка на возможность ввода только русских букв, цифр, тире и пробелов

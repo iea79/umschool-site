@@ -1,0 +1,38 @@
+extends ../layout/layout.pug
+
+block variable
+    -var version = '0.7';
+    -var path = '../';
+
+block content
+    // begin teaching
+    section#teaching.teaching.section
+        .container_center
+            .teaching__head
+                a.teaching__back(href=path) Вернуться на главную страницу школы
+                .teaching__tabs
+                    .teaching__tab(data-class="9" data-class-title="- 9 класс") 9 класс
+                    .teaching__tab(data-class="10" data-class-title="- 10 класс") 10 класс
+                    .teaching__tab(data-class="11" data-class-title="- 11 класс") 11 класс
+
+                .teaching__swich
+                    .teaching__current Все предметы
+                    .teaching__drop
+                        .scrollbar
+                            .teaching__dropItem.active(data-prof="all") все предметы
+                            .teaching__dropItem(data-prof="mathematics" data-prof-title="по математике") математика
+                            .teaching__dropItem(data-prof="social" data-prof-title="по обществознанию") обществознание
+                            .teaching__dropItem(data-prof="russian" data-prof-title="по русскому языку") русский язык
+                            .teaching__dropItem(data-prof="physics" data-prof-title="по физике") физика
+                            .teaching__dropItem(data-prof="english" data-prof-title="по английскому языку") английский язык
+                            .teaching__dropItem(data-prof="deutsche" data-prof-title="по немецкому языку") немецкий язык
+                            .teaching__dropItem(data-prof="biology" data-prof-title="по биологии") биология
+                            .teaching__dropItem(data-prof="history" data-prof-title="по истории") история
+                            .teaching__dropItem(data-prof="informatics" data-prof-title="по информатике") информатика
+                            .teaching__dropItem(data-prof="literature" data-prof-title="по литературе") литература
+
+            h1.section__title Все преподаватели онлайн-школы «Умскул»
+            .teaching__list
+                include ../layout/teachers.pug
+
+    // end teaching

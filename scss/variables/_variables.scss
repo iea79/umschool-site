@@ -1,24 +1,28 @@
 /* Global variables */
 /* ======================================================================== */
-$main_font_family: "Open Sans";
-$main_color: #000;
+$main_font_family: "TT Firs Neue";
+$seccond_font_family: "Caveat";
+$main_color: #331f15;
 $main_line_height: 1.2;
 $main_font_size: 16px;
 
-$container_width: 1200px;
+$container_width: 74em;
 
-$footer_height: 60px;
+$footer_height: auto;
 
 // Color collection for elements
-$color_primary: #7b8287;
-$color_success: #36a566;
-$color_info: #03a9f4;
+$color_primary: #4583ff;
+$color_seccondary: #4c75a3;
+$color_success: #f19137;
+$color_info: #9aaaba;
 $color_warning: #fca33e;
-$color_danger: #ff1a1a;
+$color_muted: #f6f6f6;
+$color_danger: #cd201f;
 $color_withe: #ffffff;
 
 $el-colors: (
 	primary: $color_primary, // color for .element__primary
+	seccondary: $color_seccondary, // color for .element__primary
 	success: $color_success, // color for .element__success
 	info: $color_info, // color for .element__info
 	warning: $color_warning, // color for .element__warning
@@ -35,21 +39,21 @@ $grid_padding: 20px;
 
 // Input color
 $input_color: $main_color;
-$input_bg_color: #fff;
-$input_border_color: #ddd;
-$input_placeholder_color: #ddd;
+$input_bg_color: rgba($color_info, 0.15);
+$input_border_color: rgba($color_info, 0.15);
+$input_placeholder_color: $color_info;
 
 // Input hover color
-$input_hover_color: #fff;
-$input_hover_bg_color: #fff;
-$input_hover_border_color: #ddd;
-$input_hover_placeholder_color: #ddd;
+$input_hover_color: $color_info;
+$input_hover_bg_color: lighten($input_bg_color, 10%);
+$input_hover_border_color: lighten($input_bg_color, 10%);
+$input_hover_placeholder_color: $input_color;
 
 // Input focus color
-$input_focus_color: #fff;
-$input_focus_bg_color: #fff;
-$input_focus_border_color: #ddd;
-$input_focus_placeholder_color: #ddd;
+$input_focus_color: $color_info;
+$input_focus_bg_color: lighten($input_bg_color, 10%);
+$input_focus_border_color: lighten($input_bg_color, 10%);
+$input_focus_placeholder_color: $input_color;
 
 // Input disabled color
 $input_disabled_color: #fff;

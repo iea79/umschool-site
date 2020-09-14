@@ -1,9 +1,491 @@
 extends layout/layout.pug
 
 block content
-    .container_center
+    // begin home
+    section#home.home.section
+        .container_center
+            .home__content
+                h1.home__title Поможем подготовиться <br>к ЕГЭ и ОГЭ на 80+ баллов <br>﻿в режиме онлайн
+                h2.section__sub Так же, как помогли 17 000 ученикам до этого
+                .home__action
+                    button.btn.btn_success(data-toggle="modal" data-target="#free") Бесплатная неделя подготовки
+                    .home__pay или 
+                        a(href="#choosen" data-scroll-to) оплатите обучение сразу
 
-        .grid
-            .grid__item Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, in.
-            .grid__item Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo numquam sequi officiis. Quia sed modi voluptatem, aut rem possimus at ipsa nobis iure non corporis nulla suscipit praesentium quos numquam quasi magni delectus eius illo, harum hic id! Laboriosam culpa recusandae nesciunt ab natus molestiae porro reiciendis, eveniet architecto temporibus!
-            .grid__item Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt fugiat, pariatur, explicabo ut quidem deleniti velit sed error dolor! Voluptates dignissimos consectetur repudiandae ipsam. Iusto, rerum, quam! Corporis, nisi, inventore?
+    // end home
+
+    // begin profits
+    .profits
+        .container_center
+            .profits__list
+                .profits__item
+                    .profits__number 26 327
+                    .profits__name Количество учеников
+                .profits__item
+                    .profits__number 312
+                    .profits__name Количество 
+                        img(src="img/logo-sm.svg", alt="")
+                        |стобальников
+                .profits__item
+                    .profits__number 83
+                    .profits__name Средний балл
+                        img(src="img/info.png", alt="")
+
+    // end profits
+
+
+    // begin acknowledgement
+    section#acknowledgement.acknowledgement.section
+        .container_center
+            h2.section__title Мы смогли сделать онлайн-подготовку к ЕГЭ и ОГЭ эффективной
+            h3.section__sub Это подтверждают 26 327 наших выпускников
+        .acknowledgement__img
+            img(src="img/acknowledgement.jpg", alt="")
+
+    // end acknowledgement
+
+    // begin translation
+    section#translation.translation.section
+        .container_center
+            .translation__content
+                .translation__left
+                    h2.section__title Все занятия <br>проходят в формате онлайн-трансляций
+                    h3.section__sub Мы проводим 12 вебинаров в месяц, <br>если вы готовитесь к ЕГЭ, и 8 вебинаров, <br> если вы готовитесь к ОГЭ.
+                    h3.section__sub Длительность каждого занятия — 2-2,5 часа.
+
+                    .translation__toggle
+                        .translation__item.active(data-tab="video-prew-1") Вебинары
+                        .translation__item(data-tab="video-prew-3") Платформа
+                        .translation__item(data-tab="video-prew-2") Домашние задания
+                        .translation__item(data-tab="video-prew-4") Кураторы
+
+                .translation__right
+                    .translation__video.active#video-prew-1
+                        .video__wrapper.js-youtube#OuOXvavAy1c
+                            img.video__prev(src="img/translation.png", alt="")
+                        .translation__play
+                            i.icon_play 
+                            a(href="") Посмотреть пример вебинара
+                    .translation__video#video-prew-2
+                        img(src="img/translation.png", alt="")
+                    .translation__video#video-prew-3
+                        img(src="img/translation.png", alt="")
+                    .translation__video#video-prew-4
+                        img(src="img/translation.png", alt="")
+
+    // end translation
+
+    // begin choosen
+    mixin examsItem(name)
+        .choosen__infoTop
+            .choosen__infoName= name
+            .choosen__infoPhoto
+                .choosen__infoPhotoLabel Преподаватели:
+                .choosen__infoPhotoItem
+                    img(src="img/choosen-1.png", alt="") 
+                    span Артур Шарафиев
+                .choosen__infoPhotoItem
+                    img(src="img/choosen-2.png", alt="") 
+                    span Анастасия Малова
+                .choosen__infoPhotoItem
+                    img(src="img/choosen-3.png", alt="") 
+                    span Александр Долгих
+
+        .choosen__infoDescr Умскул — это №1 онлайн-школа подготовки к ЕГЭ и ОГЭ. За 4 года мы подготовили более 15 000 ребят, которые сдали ЕГЭ на высокие баллы, а 312 человек сдали ЕГЭ на 100 баллов.
+
+        .choosen__pay
+            .choosen__payLabel Оплатить мастер-группу:
+            .choosen__payList
+                each pay, i in [{name: 'МГ Лайт', b: '1 500 ₽'}, {name: 'МГ Стандарт', b: '2 950 ₽'}, {name: 'МГ Про', b: '3 650 ₽'}, {name: 'МГ Хард', b: '3 750 ₽'}, {name: 'МГ Премиум', b: '4 500 ₽'}, {name: '', b: 'Бесплатная неделя'}, ]
+                    if i === 5
+                        .choosen__payItem.choosen__payItem_free
+                            .choosen__payImg
+                                img(src="img/choosen-pay-"+(i+1)+".png", alt="")
+                            .choosen__payText
+                                b= pay.b
+                    else
+                        .choosen__payItem
+                            .choosen__payImg
+                                img(src="img/choosen-pay-"+(i+1)+".png", alt="")
+                            .choosen__payText= pay.name 
+                                b= pay.b
+
+            .choosen__payQuest
+                a(href="#" data-toggle="modal" data-target="#masterGroup") Чем отличаются мастер-группы друг от друга?
+
+    mixin examsList(tab)
+        .choosen__list
+            // Тут первый элемнт в списке для моб версии
+            .choosen__current Математика
+            .choosen__drop
+                .scrollbar
+                    -var choosen = ['Математика', 'Русский язык', 'Физика', 'Химия', 'Общество', 'История', 'Английский язык', 'Немецкий язык', 'География', 'Информатика', 'Химия', 'Математика', 'Русский язык', 'Физика', 'Химия', ];
+                    each item, i in choosen
+                        if i == 0
+                            .choosen__listItem.active(data-tab=""+tab+"-choosen-"+i+"")= item
+                        else
+                            .choosen__listItem(data-tab=""+tab+"-choosen-"+i+"")= item
+
+        each item, i in choosen
+            if i == 0
+                .choosen__info.active(id=""+tab+"-choosen-"+i+"")
+                    +examsItem(item)
+            else
+                .choosen__info(id=""+tab+"-choosen-"+i+"")
+                    +examsItem(item)
+
+
+    section#choosen.choosen.section
+        .container_center
+            h2.section__title.desktop Выберите, к какому экзамену вы готовитесь
+            .section__title.mobile Оплатить занятие:
+            .choosen__label.mobile Выберите экзамен:
+            .choosen__content
+                .choosen__tabs
+                    .choosen__tab(data-tab="exam-1").active ЕГЭ
+                    .choosen__tab(data-tab="exam-2") ОГЭ
+                .choosen__panes
+                    .choosen__label.mobile Выберите предмет:
+                    .choosen__pane.active#exam-1
+                        +examsList('exam-1')
+
+                    .choosen__pane#exam-2
+                        +examsList('exam-2')
+
+    // end choosen
+
+    // begin platform
+    section#platform.platform.section
+        .container_center
+            .platform__content
+                .platform__item
+                    h2.section__title Уникальная IT-платформа, на которой проводится всё обучение
+                    .section__sub
+                        p Здесь есть все для вашего удобства: записи занятий,  домашние задания, разборы, дополнительные варианты.
+                        p Мы разработали свою платформу на основе  обратной связи тысяч учеников, чтобы  сделать её максимально эффективной.
+                            img(src="img/logo-sm.svg", alt="")
+                each item, i in [{name: 'Вебинары и записи занятий', text: 'Все вебинары хранятся в записи на платформе  и их можно пересматривать в любое время.'}, {name: 'Интерактивные домашние задания', text: 'При решении заданий есть подсказки и советы,  которые направляют, но не дают готовое решение.'}, {name: 'Игровые механики обучения', text: 'Сдавайте Д/З вовремя и без ошибок и получайте баллы, которые можно обменивать на скидки и призы.'}]
+                    .platform__item
+                        .platform__img
+                            img(src="img/platform-"+i+".png", alt="")
+                        .platform__bottom
+                            .platform__name= item.name
+                            .platform__text= item.text
+
+    // end platform 
+
+    include arr/teach.pug
+
+    // begin teachers
+    section#teachers.teachers.section
+        .container_center
+            h2.section__title Каждый преподаватель объясняет материал  по специальной методике,
+            h3.section__sub которая отработана на тысячи выпускников прошлых лет
+
+            .teachers__slider.teachersSlider
+                include layout/teachers.pug
+
+            .teachers__sliderInfo.mobile Листай вправо, чтобы посмотреть всех преподавателей
+
+            .teachers__sliderMore.mobile
+                a.btn.btn_primary(href="teaching/") Все преподаватели
+
+
+            .teachers__thumbs.teacherThumbs
+                .teachers__list
+                    .scrollbar
+                        each teacher, i in teachers
+                            if i === 0
+                                .teachers__listItem.active
+                                    .teachers__listName= teacher.name
+                                    .teachers__listProf= teacher.profile
+                            else
+                                .teachers__listItem
+                                    .teachers__listName= teacher.name
+                                    .teachers__listProf= teacher.profile
+
+                .teachers__listAction
+                    a.btn.btn_primary(href="teaching/") Все преподаватели
+
+    // end teachers
+
+    // begin platform
+    section.platform.platform_seccond.section
+        .container_center
+            .platform__content
+                .platform__item
+                    h2.section__title Кураторы проверяют каждое домашнее задание и дают обратную связь
+                    .platform__img.mobile
+                        img(src="img/platform-4.png", alt="")
+                    .platform__list.platform__list_col
+                        .platform__listItem
+                            .platform__listImg
+                                img(src="img/balls.png", alt="")
+                            .platform__listText Каждый куратор знает свой предмет на 90+ баллов
+                        .platform__listItem
+                            .platform__listImg
+                                img(src="img/checklist-sm.png", alt="")
+                            .platform__listText Все кураторы ежемесячно проверяются и проходят специальное тестирование
+                        .platform__listItem
+                            .platform__listImg
+                                img(src="img/flags.png", alt="")
+                            .platform__listText Перед стартом работы они проходят двухэтапное тестирование
+
+                .platform__item.desktop
+                    .platform__img
+                        img(src="img/platform-4.png", alt="")
+                .platform__item.desktop
+                    .platform__img
+                        img(src="img/platform-5.png", alt="")
+                .platform__item
+                    h2.section__title Онлайн-куратор готов ответить на любой вопрос в течение 2-5 минут
+                    .platform__img.mobile
+                        img(src="img/platform-5.png", alt="")
+                    .platform__list
+                        .platform__listItem
+                            .platform__listImg
+                                img(src="img/caps.png", alt="")
+                            .platform__listText Ученик никогда не остается со своей проблемой один на один
+                        .platform__listItem
+                            .platform__listImg
+                                img(src="img/clock.png", alt="")
+                            .platform__listText Мы реально конструктивно помогаем и отвечаем на любой вопрос в среднем за 3 минуты
+
+    // end platform 
+
+    // begin materials
+    section#materials.materials.section
+        .container_center
+            h2.section__title К каждому занятию — продуманные рабочие тетради и домашние задания
+            .materials__tabs
+                .materials__tab.active(data-tab="materials-1") Домашнее задание
+                .materials__tab(data-tab="materials-2") Рабочая тетрадь
+
+        .materials__content
+            .materials__pane.active#materials-1
+                img(src="img/materials-1.jpg", alt="")
+            .materials__pane#materials-2
+                img(src="img/materials-2.jpg", alt="")
+
+    // end materials
+
+    // begin performance
+    section#performance.performance.section
+        .container_center
+            h2.section__title.desktop Мы готовим к ЕГЭ и ОГЭ так, чтобы <br>процесс подготовки был эффективный <br>и приносил удовольствие
+            .section__title.mobile Через нашу школу прошло 26 327 учеников
+            h3.section__sub С нами начинают любить предмет даже те, кто раньше <br>не мог решать задания первой части экзамена
+            .performance__list
+                each item, i in ['Подсказки при <br>решении заданий на платформе', 'Итоговые <br>конспекты после <br>каждого занятия', 'Баллы за Д/З, которые можно обменять на реальные призы и скидки', 'Ежемесячные вводные варианты ЕГЭ для практики на реальных примерах', 'Индивидуальные домашние задания по тем темам, которые нужно закрепить', 'Зачеты и проверки через звонки в WhatsApp для МГ PRO и HARD']
+                    .performance__item
+                        .performance__img
+                            img(src="img/performance-"+i+".png", alt="")
+                        .performance__text !{item}
+
+
+            .performance__info Это все может показаться сложным на первый взгляд. Но стоит попробовать <br>и вы начнете рекомендовать нас всем друзьям и знакомым. Кроме того, <br>вам со всем поможет разобраться ваш персональный менеджер.
+
+    // end performance
+
+    // begin app
+    section#app.app.section
+        .container_center
+            .app__content
+                .app__left
+                    h2.section__title Мобильное приложение — вы можете продолжать готовиться, даже <br>если рядом нет компьютера
+                    .app__list
+                        .app__item
+                            .app__img
+                                img(src="img/app-mobile.png", alt="")
+                            .app__text Весь функционал платформы в мобильном приложении
+                        .app__item
+                            .app__img
+                                img(src="img/app-chat.png", alt="")
+                            .app__text Онлайн-чат, в котором вы можете задавать вопросы кураторам
+
+                    .app__markets
+                        a(href="http://", target="_blank")
+                            img(src="img/google-play.svg", alt="")
+                        a(href="http://", target="_blank")
+                            img(src="img/app-store.svg", alt="")
+
+                .app__right
+                    img(src="img/app-phone.png", alt="")
+
+    // end app
+
+    // begin reviews
+    section#reviews.reviews.section
+        .container_center
+            .reviews__top
+                h2.section__title Все тысячи отзывов, <br>которые есть про нас <br>в интернете — реальные
+                .reviews__info
+                    p Недавно мы опросили учеников и попросили оценить нас по ряду параметров
+                    p Итоговый средний балл по оценкам учеников
+                        span.reviews__rate 9,9 
+                            small из 10
+                    a.reviews__show(href="#" target="_blank") Посмотреть полные результаты опроса
+
+            .reviews__content
+                .reviews__tabs
+                    .reviews__tab.active(data-tab="reviews-1") Отзывы учеников
+                    .reviews__tab(data-tab="reviews-2") Отзывы родителей
+
+                mixin reviewItem()
+                    .reviews__item
+                        .reviews__text
+                            p Хочу рассказать о занятиях у Саши и Фариши). Чего-то близкого к этому по уровню профессионализма вы не найдёте нигде! Не смотрите на то что ребята ещё будто слишком юны для преподавания, это совершенно не так) Они лишь остаются с нами на одной волне и сами ещё помнят что такое ЕГЭ
+                        .reviews__bottom
+                            .reviews__logo
+                                img(src="img/Ava.png", alt="")
+                            .reviews__descr
+                                .reviews__name
+                                    b Валерия Широбакина, 
+                                    | Санкт-Петербург
+                                a.reviews__soc(href="#")
+                                    i.icon_vk 
+                                    |vk.com/id1234567890
+
+                .reviews__pane.active#reviews-1
+                    .reviews__list
+                        each item in ['', '', '', '', '', '', '', '']
+                            +reviewItem
+
+                .reviews__pane#reviews-2
+                    .reviews__list
+                        each item in ['', '', '', '', '', '', '', '']
+                            +reviewItem
+
+                .reviews__more
+                    button.btn
+                        i.icon_refresh 
+                        |Загрузить ещё
+
+
+            .reviewsVideo
+                each item in [{id: 'OuOXvavAy1c', name: 'Валерия Широбакина', city: 'Санкт-Петербург'}, {id: 'OuOXvavAy1c', name: 'Илья Никифоров', city: 'Казань'}, {id: 'OuOXvavAy1c', name: 'Анастасия Казанкина', city: 'Екатеринбург'}, {id: 'OuOXvavAy1c', name: 'Максим Подольский', city: 'Москва'}, {id: 'OuOXvavAy1c', name: 'Наталья Телепова', city: 'Екатеринбург'}, {id: 'OuOXvavAy1c', name: 'Илья Доронин', city: 'Санкт-Петербург'}, {id: 'OuOXvavAy1c', name: 'Полина Анисимова', city: 'Чебоксары'}, {id: 'OuOXvavAy1c', name: 'Марина Вахрушева', city: 'Ижевск'}, {id: 'OuOXvavAy1c', name: 'Кирилл Баданов', city: 'Ростов-на-Дону'}]
+
+                    .reviewsVideo__item
+                        .video__wrapper.js-youtube(id=item.id)
+                        .reviewsVideo__name
+                            b= item.name
+                                |, 
+                            | #{item.city}
+
+            .reviewsVideo__action.mobile
+                a.btn.btn_more(href="#")
+                    i.icon_refresh 
+                    |Загрузить ещё
+
+            .reviewsVideo__info
+                b Мы собрали более 3 000 отзывов 
+                |на одной странице. Каждый из них — реальный. Переходите и изучайте
+
+            .reviewsVideo__more
+                a.btn.btn_success(href="#" target="_blank") Открыть отзывы
+
+            .reviewsFrends
+                p
+                    b Вы можете спросить у своих одноклассников. 
+                    br
+                    |Скорее всего, кто-то из них уже занимался с нами. <br>Пусть они вам честно расскажут, нравится <br>им процесс подготовки или нет
+
+    // end reviews
+
+    // begin getFree
+    section#getFree.getFree.section
+        .container_center
+            include section/getfree.pug
+
+    // end getFree
+
+    // begin getKit
+    section#getKit.getKit.section
+        .container_center
+            .getKit__content
+                .getKit__left
+                    h2.section__title Получите набор бесплатных материалов для подготовки к ЕГЭ и ОГЭ ﻿от наших преподавателей
+                    .getKit__action
+                        a.btn.btn_seccondary.btn_vk(href="#")
+                            i.icon_vk 
+                            |Подписаться на материалы
+                    .getKit__info Авторизуйтесь через ВК и мы сразу же вышлем пособия по подготовке в личном сообщении
+
+                .getKit__right
+                    img(src="img/getkit-bg.png", alt="")
+
+    // end getKit
+
+    //- // Button trigger modal free
+    //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#free") Click to open modal
+    // Begin Modal free
+    .modal.fade.free#free
+        .modal-dialog
+            a(href="#" class="modal-close" data-dismiss="modal")
+            include section/getfree.pug
+    // End modal free
+
+    //- // Button trigger modal callbackForm
+    //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#callbackForm") Click to open modal
+    // Begin Modal callbackForm
+    .modal.fade.callbackForm#callbackForm
+        .modal-dialog
+            a(href="#" class="modal-close" data-dismiss="modal")
+            form.form(action="send.php")
+                .form__title 
+                    b Заполните форму 
+                    |и наш менеджер перезвонит вам в течение 30 минут
+                .form__sub Сразу после заполнения формы вы попадете на платформу и вам позвонит персональный менеджер
+                .form__row
+                    input(type="text", placeholder="Ваше имя" required)
+                    i.icon_user
+                .form__row
+                    input(type="tel", placeholder="+7" required)
+                    i.icon_phone
+                .form__row
+                    input(type="email", placeholder="E-mail" required)
+                    i.icon_mail
+                .form__action
+                    button.btn.btn_success(type="submit") Заказать звонок
+                .form__privacy Нажимая на кнопку, вы принимаете 
+                    a(href="#") условия обработки данных
+    // End modal callbackForm
+
+    //- // Button trigger modal masterGroup
+    //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#masterGroup") Click to open modal
+    //- // Begin Modal masterGroup
+    .modal.fade.masterGroup#masterGroup
+        .modal-dialog
+            .modal-title Все мастер-группы онлайн-школы «Умскул»
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-content
+                -var group = [{name: '12 онлайн-занятий', standart: true, pro: true, hard: true}, {name: 'Записи занятий', standart: true, pro: true, hard: true}, {name: 'Домашние задания', standart: true, pro: true, hard: true}, {name: 'Подсказки к Д/З', standart: true, pro: true, hard: true}, {name: 'Образовательная платформа', standart: true, pro: true, hard: true}, {name: 'Персональный менеджер', standart: true, pro: true, hard: true}, {name: 'Онлайн-куратор (отвечает за 3 мин.)', standart: true, pro: true, hard: true}, {name: 'Программа лояльности', standart: true, pro: true, hard: true}, {name: 'Личный куратор ПРО', standart: false, pro: true, hard: true}, {name: 'Мягкий контроль', standart: false, pro: true, hard: false}, {name: 'Жесткий контроль', standart: false, pro: false, hard: true}, {name: 'Система жизней', standart: false, pro: false, hard: true}, {name: 'Возможность вылететь', standart: false, pro: false, hard: true}, {name: '×3 программа лояльности', standart: false, pro: false, hard: true}, ]
+                .masterGroup__table
+                    .masterGroup__head
+                        .masterGroup__col
+                            .masterGroup__title ЕГО 2020
+                        .masterGroup__col
+                            .masterGroup__label мастер-группа
+                            .masterGroup__name Стандарт
+                        .masterGroup__col
+                            .masterGroup__label мастер-группа
+                            .masterGroup__name Про
+                        .masterGroup__col
+                            .masterGroup__label мастер-группа
+                            .masterGroup__name Хард
+
+                    each item in group
+                        .masterGroup__row
+                            .masterGroup__col= item.name
+                            .masterGroup__col
+                                //- .masterGroup__name.mobile Стандарт
+                                img(src="img/"+item.standart+".svg", alt="")
+                            .masterGroup__col= pro
+                                //- .masterGroup__name.mobile Про
+                                img(src="img/"+item.pro+".svg", alt="")
+                            .masterGroup__col= hard
+                                //- .masterGroup__name.mobile Хард
+                                img(src="img/"+item.hard+".svg", alt="")
+
+
+    // End modal masterGroup

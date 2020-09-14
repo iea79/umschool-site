@@ -1,0 +1,72 @@
+.home {
+    padding: 9.9em 0 25em;
+    background: #fafafc url("../img/home-bg-sm.jpg") left -0.7em bottom no-repeat;
+    background-size: 103.6%;
+
+    @media (min-width: 768px) {
+        padding: 12.5em 0 11.1em;
+        background: url("../img/home-bg.jpg") 0 0 no-repeat;
+        background-size: cover;
+    }
+
+    &__content {
+        max-width: 48em;
+    }
+
+    &__title {
+        font-size: 1.9em;
+        color: $main_color;
+        font-family: $main_font_family;
+        font-weight: 600;
+        line-height: $main_line_height;
+        margin: 0 0 0.4em;
+        text-align: center;
+        line-height: 1.4;
+
+        @media (min-width: 768px) {
+            font-size: 3.3em;
+            text-align: left;
+            font-weight: 600;
+            line-height: 1.3;
+            margin: 0 0 0.1em;
+        }
+    }
+
+    .section {
+        &__sub {
+            @media (max-width: 767px) {
+                text-align: center;
+                padding: 0 3em;
+            }
+        }
+    }
+
+    &__action {
+        margin-top: -0.3em;
+
+        @media (min-width: 768px) {
+            max-width: 23.8em;
+            margin-top: 0;
+        }
+
+        .btn {
+            width: 100%;
+        }
+    }
+
+    &__pay {
+        text-align: center;
+        font-size: 1.4em;
+        margin-top: 1.1em;
+
+        a {
+            color: $color_primary;
+            border-bottom: 0.063em dotted;
+            text-decoration: none;
+
+            &:hover {
+                border-bottom-color: transparent;
+            }
+        }
+    }
+}

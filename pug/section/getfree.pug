@@ -1,0 +1,45 @@
+.getFree__content
+    .getFree__left
+        h2.section__title Занимайтесь 
+            span.desktop одну 
+            |неделю в нашей 
+            span.desktop онлайн-
+            |школе бесплатно
+        h3.section__sub.desktop Получите результат и сделайте выводы сами
+        .getFree__list
+            each item, i in ['3 вебинара <br>мастер-групп <br>от УМСКУЛ', 'Все возможности <br>платформы и всей школы', '3 домашних задания с полной проверкой']
+                .getFree__listItem
+                    .getFree__listImg
+                        img(src="img/getfree-"+i+".png", alt="")
+                    .getFree__listText !{item}
+
+    .getFree__right
+        form.form(action="send.php")
+            .form__title Заполните форму 
+                b и получите доступ к первым бесплатным занятиям
+            .form__sub Сразу после заполнения формы вы попадете на платформу и вам позвонит персональный менеджер
+            .form__row
+                input(type="text", placeholder="Ваше имя" required)
+                i.icon_user
+            .form__row
+                input(type="tel", placeholder="+7" required)
+                i.icon_phone
+            .form__row
+                input(type="email", placeholder="E-mail" required)
+                i.icon_mail
+            .form__action
+                button.btn.btn_success(type="submit") Получить бесплатные занятия
+            .form__privacy Нажимая на кнопку, вы принимаете 
+                a(href="#") условия обработки данных
+
+
+
+.getFree__bottom
+    .getFree__label
+        b Не хотите оставлять номер телефона? 
+        |Оставьте заявку через ВКонтакте:
+    i.icon_angel_right
+    .getFree__vk
+        a.btn.btn_seccondary.btn_vk(href="#")
+            i.icon_vk 
+            |Получить тестовую неделю

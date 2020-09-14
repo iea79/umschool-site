@@ -1,0 +1,36 @@
+include ../arr/teach.pug
+
+// data-class - номер класса для фильтра, должно совпадать с data-class в фильтре
+// data-prof - название предмета,  должно совпадать с data-prof в фильтре
+each teacher in teachers
+    .teachers__item(style="background-color: "+teacher.color+"" data-class=teacher.num data-prof=teacher.prof)
+        .teachers__descr
+            .teachers__name= teacher.name
+            .teachers__sub  Cтарший преподаватель УМСКУЛ
+            .teachers__info
+                .teachers__infoItem
+                    .teachers__label Опыт <br>работы
+                    .teachers__props 7 лет
+                .teachers__infoItem
+                    .teachers__label Количество выпускников
+                    .teachers__props 2 109
+                .teachers__infoItem
+                    .teachers__label Количество стобальников
+                    .teachers__props 103
+                .teachers__infoItem
+                    .teachers__label Средний бал учеников
+                    .teachers__props 76,7
+            .teachers__soc
+                .teachers__socLabel Социальные сети —
+                .teachers__socList
+                    a(href="http://vk.com", target="_blank")
+                        img(src=path + "img/vk-link.svg", alt="")
+                    a(href="http://instagram.com", target="_blank")
+                        img(src=path + "img/insta-link.svg", alt="")
+
+        .teachers__photo
+            img(
+                srcset=path + "img/teachers/"+teacher.photo+"-mob.png 767w, "+path+"img/teachers/"+teacher.photo+".png 1920w" 
+                size="(max-width: 767px) 800px, (min-width: 768px)" 
+                src=path + "img/teachers/"+teacher.photo+".png", alt=""
+                )

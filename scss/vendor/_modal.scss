@@ -1,4 +1,5 @@
 // Modal / bootstrap ------------------------------------------
+
 .modal {
     display: none;
     overflow: auto;
@@ -11,59 +12,89 @@
     z-index: 1050;
     -webkit-overflow-scrolling: touch;
     outline: 0;
+
+    padding: 0 0.5em;
+
     &-open {
         overflow: hidden;
     }
+
     &-close {
         position: absolute;
-        width: 21px;
-        height: 21px;
-        right: 23px;
-        top: 23px;
+        width: 1.8em;
+        height: 1.8em;
+        right: 1em;
+        top: -2em;
+
+        @media (min-width: 768px) {
+            top: 2em;
+            right: -3em;
+        }
         // background: image-url('close.svg') no-repeat center center;
-        &:before,&:after {
+        &:after,
+        &:before {
             content: '';
             position: absolute;
             display: block;
-            width: 20px;
-            border-top: 1px solid $main_color;
-            top: 10px;
+            width: 100%;
+            border-top: 0.25em solid rgba($color_withe, .5);
+            top: 50%;
+            margin-top: -.1em;
         }
+
         &:before {
             transform: rotate(45deg);
         }
+
         &:after {
             transform: rotate(-45deg);
         }
+
         &:hover {
-            opacity: .8;
+            opacity: 0.8;
         }
     }
+
     &.fade .modal-dialog {
         transform: translate(0, -25%);
         transition: transform 0.3s ease-out;
     }
+
     &.in .modal-dialog {
         transform: translate(0, 0);
         position: relative;
     }
+
     &-dialog {
         position: relative;
         width: auto;
-        margin: 10px auto;
-        max-width: 690px;
+        margin: 2em auto;
+        max-width: 72em;
+
+        @media (min-width: 768px) {
+            margin: 1em auto;
+        }
+
+        .callbackForm & {
+            max-width: 30em;
+        }
+
+        .free & {
+            max-width: 72em;
+        }
+
     }
 
     &-content {
-        position: relative;
-        background-color: #fff;
-        border: 1px solid #999;
-        border: 1px solid rgba(0,0,0,.2);
-        border-radius: 6px;
-        box-shadow: 0 3px 9px rgba(0,0,0,.5);
-        background-clip: padding-box;
-        outline: 0;
-        padding: 46px 53px;
+        // position: relative;
+        // background-color: #fff;
+        // border: 1px solid #999;
+        // border: 1px solid rgba(0,0,0,.2);
+        // border-radius: 6px;
+        // box-shadow: 0 3px 9px rgba(0,0,0,.5);
+        // background-clip: padding-box;
+        // outline: 0;
+        // padding: 46px 53px;
     }
 
     &-backdrop {
@@ -73,14 +104,15 @@
         bottom: 0;
         left: 0;
         z-index: 1040;
-        background-color: #000;
+        background: #2ec499;
+
         &.fade {
             opacity: 0;
             filter: alpha(opacity=0);
         }
 
         &.in {
-            opacity: .5;
+            opacity: 0.95;
             filter: alpha(opacity=50);
         }
     }
@@ -90,6 +122,7 @@
         min-height: 16.42857143px;
         color: #666;
         font-size: 18px;
+
         .close {
             margin-top: -2px;
         }
@@ -110,6 +143,7 @@
         padding: 19px 20px 20px;
         text-align: right;
         border-top: 1px solid #e5e5e5;
+
         .btn+.btn {
             margin-left: 5px;
             margin-bottom: 0;
@@ -125,6 +159,3 @@
     }
 
 }
-
-
-
