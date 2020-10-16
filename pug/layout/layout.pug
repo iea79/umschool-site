@@ -1,13 +1,17 @@
 block variable
-    -var version = '0.9';
+    -var version = '1.3';
     -var path = '';
+    -var title = 'Онлайн-школа «Умсукл»';
+    -var description = 'Поможем подготовиться  к ЕГЭ и ОГЭ на 80+ баллов ﻿в режиме онлайн. Мы смогли сделать онлайн-подготовку к ЕГЭ и ОГЭ эффективной. Это подтверждают 26 327 наших выпускников.';
+    -var thanks = false;
 <!DOCTYPE html>
 html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title УМСКУЛ
+        title=title
+        meta(name="description" content=description)
 
         link(rel="apple-touch-icon" sizes="180x180" href=path + "img/fav/apple-touch-icon.png")
         link(rel="icon" type="image/png" sizes="32x32" href=path + "img/fav/favicon-32x32.png")
@@ -22,6 +26,12 @@ html(lang="en")
 
         if path !== '../'
             include header.pug
+
+        if thanks
+            include header.pug
+
+        else
+            //- code
 
         main.main_content
             block content

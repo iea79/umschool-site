@@ -147,7 +147,7 @@
     &__item {
         display: flex;
         overflow: hidden;
-        padding: 10em 1em 1em;
+        padding: 11em 1em 1em;
         border-radius: 0.9em;
         // align-items: flex-end;
 
@@ -188,7 +188,7 @@
 
         @media (min-width: 768px) {
             font-size: 2.19em;
-            margin: -0.1em 0 0.2em;
+            margin: -0.1em -4em 0.2em 0;
 
         }
     }
@@ -311,7 +311,17 @@
             position: absolute;
             top: 1em;
             left: 3em;
-            height: 9em;
+            height: 10em;
+            width: 10em;
+            display: flex;
+            align-items: flex-end;
+
+            img {
+                flex: none;
+                width: 100%;
+                margin-right: auto;
+                object-fit: contain;
+            }
             // width: 50%;
         }
 

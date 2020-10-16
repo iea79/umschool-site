@@ -15,17 +15,18 @@
 
     .getFree__right
         form.form(action="send.php")
+            input(type="hidden" name="subject" value="Доступ к первым бесплатным занятиям")
             .form__title Заполните форму 
                 b и получите доступ к первым бесплатным занятиям
             .form__sub Сразу после заполнения формы вы попадете на платформу и вам позвонит персональный менеджер
             .form__row
-                input(type="text", placeholder="Ваше имя" required)
+                input(type="text", placeholder="Ваше имя" name="name" required)
                 i.icon_user
             .form__row
-                input(type="tel", placeholder="+7" required)
+                input(type="tel", placeholder="+7" name="tel" required)
                 i.icon_phone
             .form__row
-                input(type="email", placeholder="E-mail" required)
+                input(type="email", placeholder="E-mail" name="email" required)
                 i.icon_mail
             .form__action
                 button.btn.btn_success(type="submit") Получить бесплатные занятия

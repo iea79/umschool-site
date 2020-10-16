@@ -1,8 +1,33 @@
 .profits {
-    padding: 3.1em 0 2em;
+    padding: 3.1em 0 3em;
+    margin-bottom: 3.5em;
+    position: relative;
 
     @media (min-width: 768px) {
         padding: 5em 0;
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 767px) {
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            display: block;
+            border-top: 0.063em solid #DADADA;
+        }
+
+        &:before {
+            left: 8%;
+            right: 8%;
+            bottom: -1.6em;
+        }
+
+        &:after {
+            left: 29%;
+            right: 29%;
+            bottom: -4em;
+        }
     }
 
     &__list {
@@ -17,7 +42,7 @@
     }
 
     &__item {
-        width: 56%;
+        width: 61%;
         padding: 0.8em 2em;
 
         @media (min-width: 768px) {
@@ -25,6 +50,14 @@
             align-items: center;
             width: 33.3%;
             padding: 0.8em 1em;
+        }
+
+        @media (max-width: 767px) {
+            &:first-child {
+                .profits__name {
+                    max-width: none;
+                }
+            }
         }
 
         &:nth-child(n+2) {
@@ -82,6 +115,11 @@
         margin-top: 0.1em;
         line-height: 1.3;
         font-size: 1.3em;
+
+        .tooltip {
+            width: 1.2em;
+            height: auto;
+        }
 
         @media (min-width: 768px) {
             font-size: 1em;

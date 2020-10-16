@@ -77,6 +77,12 @@
         @media (min-width: 768px) {
             width: 6em;
             margin-right: 0.5em;
+            height: 5em;
+            text-align: center;
+
+            img {
+                height: 100%;
+            }
         }
     }
 

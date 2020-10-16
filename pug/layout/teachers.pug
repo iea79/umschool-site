@@ -31,6 +31,6 @@ each teacher in teachers
         .teachers__photo
             img(
                 srcset=path + "img/teachers/"+teacher.photo+"-mob.png 767w, "+path+"img/teachers/"+teacher.photo+".png 1920w" 
-                size="(max-width: 767px) 800px, (min-width: 768px)" 
+                sizes="(max-width: 767px) 200px,(min-width: 768px) 1000px" 
                 src=path + "img/teachers/"+teacher.photo+".png", alt=""
                 )

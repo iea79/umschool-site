@@ -69,6 +69,25 @@ $(document).ready(function() {
         $('.teachersSlider').slick('goTo', $(this).index());
     });
 
+    $('.tooltip').tooltipster({
+        trigger: 'custom',
+        triggerOpen: {
+            mouseenter: true,
+            touchstart: true,
+        },
+        triggerClose: {
+            mouseleave: true,
+            scroll: true,
+            tap: true,
+        }
+    });
+
+    $('.modal').on('show.bs.modal', function() {
+        if ($('body').hasClass('modal-open')) {
+            $('.modal.in').modal('hide');
+        }
+    });
+
     srollToId();
     filterTeacher();
     openProfList();

@@ -4,7 +4,8 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>УМСКУЛ</title>
+    <title>Онлайн-школа «Умсукл»</title>
+    <meta name="description" content="Поможем подготовиться  к ЕГЭ и ОГЭ на 80+ баллов ﻿в режиме онлайн. Мы смогли сделать онлайн-подготовку к ЕГЭ и ОГЭ эффективной. Это подтверждают 26 327 наших выпускников."/>
     <link rel="apple-touch-icon" sizes="180x180" href="img/fav/apple-touch-icon.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png"/>
     <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png"/>
@@ -12,12 +13,12 @@
     <link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#5bbad5"/>
     <meta name="msapplication-TileColor" content="#da532c"/>
     <meta name="theme-color" content="#ffffff"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css?0.9"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css?1.3"/>
   </head>
   <body>
     <header class="header">
       <div class="header__content">
-        <div class="header__left"><a class="logo" href="/"><img src="img/logo.svg" alt="alt"/><span class="logo__text"><img src="img/logo-text.svg" alt=""/></span></a></div>
+        <div class="header__left"><a class="logo" href=""><img src="img/logo.svg" alt="alt"/><span class="logo__text"><img src="img/logo-text.svg" alt=""/></span></a></div>
         <div class="header__right">
           <div class="callback">
             <div class="desktop"><a class="callback__phone" href="tel: 8 800 222 04 41"> <i class="icon_phone"> </i>8 800 222 04 41</a>
@@ -65,7 +66,10 @@
             </div>
             <div class="profits__item">
               <div class="profits__number">83</div>
-              <div class="profits__name">Средний балл<img src="img/info.png" alt=""/></div>
+              <div class="profits__name">Средний балл<img class="tooltip" src="img/info.png" data-tooltip-content="#tooltip_content" title=""/><div class="tooltip_templates">
+<span id="tooltip_content">В конце каждого года мы проводим масштабный опрос наших учеников. <br>По результатам опроса выпускников 2019 года этот средний балл равен 83. Интересный факт из статистики: чем дольше ученик занимался в нашей школе, тем выше у него результат.</span>
+</div>
+              </div>
             </div>
           </div>
         </div>
@@ -159,27 +163,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -201,27 +197,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -243,27 +231,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -285,27 +265,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -327,27 +299,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -369,27 +333,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -411,27 +367,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -453,27 +401,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -495,27 +435,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -537,27 +469,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -579,27 +503,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -621,27 +537,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -663,27 +571,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -705,27 +605,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -747,27 +639,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -814,27 +698,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -856,27 +732,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -898,27 +766,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -940,27 +800,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -982,27 +834,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -1024,27 +868,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -1066,27 +902,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -1108,27 +936,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -1150,27 +970,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -1192,27 +1004,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -1234,27 +1038,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -1276,27 +1072,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -1318,27 +1106,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -1360,27 +1140,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -1402,27 +1174,19 @@
                               <div class="choosen__pay">
                                 <div class="choosen__payLabel">Оплатить мастер-группу:</div>
                                 <div class="choosen__payList">
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-1.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Лайт<b>1 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-1">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-2.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Стандарт<b>2 950 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-2">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-3.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Про<b>3 650 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
+                                  <div class="choosen__payItem" data-toggle="modal" data-target="#getProgram-3">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-4.png" alt=""/></div>
                                     <div class="choosen__payText">МГ Хард<b>3 750 ₽</b></div>
                                   </div>
-                                  <div class="choosen__payItem">
-                                    <div class="choosen__payImg"><img src="img/choosen-pay-5.png" alt=""/></div>
-                                    <div class="choosen__payText">МГ Премиум<b>4 500 ₽</b></div>
-                                  </div>
-                                  <div class="choosen__payItem choosen__payItem_free">
+                                  <div class="choosen__payItem choosen__payItem_free" data-toggle="modal" data-target="#getProgram-free">
                                     <div class="choosen__payImg"><img src="img/choosen-pay-6.png" alt=""/></div>
                                     <div class="choosen__payText"><b>Бесплатная неделя</b></div>
                                   </div>
@@ -1507,7 +1271,7 @@
                   <div class="teachers__socList"><a href="http://vk.com" target="_blank"><img src="img/vk-link.svg" alt=""/></a><a href="http://instagram.com" target="_blank"><img src="img/insta-link.svg" alt=""/></a></div>
                 </div>
               </div>
-              <div class="teachers__photo"><img srcset="img/teachers/Шарафиев-mob.png 767w, img/teachers/Шарафиев.png 1920w" size="(max-width: 767px) 800px, (min-width: 768px)" src="img/teachers/Шарафиев.png" alt=""/></div>
+              <div class="teachers__photo"><img srcset="img/teachers/Шарафиев-mob.png 767w, img/teachers/Шарафиев.png 1920w" sizes="(max-width: 767px) 200px,(min-width: 768px) 1000px" src="img/teachers/Шарафиев.png" alt=""/></div>
             </div>
             <div class="teachers__item" style="background-color: #ededf6" data-class="11" data-prof="mathematics">
               <div class="teachers__descr">
@@ -1536,7 +1300,7 @@
                   <div class="teachers__socList"><a href="http://vk.com" target="_blank"><img src="img/vk-link.svg" alt=""/></a><a href="http://instagram.com" target="_blank"><img src="img/insta-link.svg" alt=""/></a></div>
                 </div>
               </div>
-              <div class="teachers__photo"><img srcset="img/teachers/Баканчев-mob.png 767w, img/teachers/Баканчев.png 1920w" size="(max-width: 767px) 800px, (min-width: 768px)" src="img/teachers/Баканчев.png" alt=""/></div>
+              <div class="teachers__photo"><img srcset="img/teachers/Баканчев-mob.png 767w, img/teachers/Баканчев.png 1920w" sizes="(max-width: 767px) 200px,(min-width: 768px) 1000px" src="img/teachers/Баканчев.png" alt=""/></div>
             </div>
             <div class="teachers__item" style="background-color: #ededf6" data-class="9" data-prof="mathematics">
               <div class="teachers__descr">
@@ -1565,7 +1329,7 @@
                   <div class="teachers__socList"><a href="http://vk.com" target="_blank"><img src="img/vk-link.svg" alt=""/></a><a href="http://instagram.com" target="_blank"><img src="img/insta-link.svg" alt=""/></a></div>
                 </div>
               </div>
-              <div class="teachers__photo"><img srcset="img/teachers/Адамова-mob.png 767w, img/teachers/Адамова.png 1920w" size="(max-width: 767px) 800px, (min-width: 768px)" src="img/teachers/Адамова.png" alt=""/></div>
+              <div class="teachers__photo"><img srcset="img/teachers/Адамова-mob.png 767w, img/teachers/Адамова.png 1920w" sizes="(max-width: 767px) 200px,(min-width: 768px) 1000px" src="img/teachers/Адамова.png" alt=""/></div>
             </div>
             <div class="teachers__item" style="background-color: #e8daff" data-class="9" data-prof="mathematics">
               <div class="teachers__descr">
@@ -1594,7 +1358,7 @@
                   <div class="teachers__socList"><a href="http://vk.com" target="_blank"><img src="img/vk-link.svg" alt=""/></a><a href="http://instagram.com" target="_blank"><img src="img/insta-link.svg" alt=""/></a></div>
                 </div>
               </div>
-              <div class="teachers__photo"><img srcset="img/teachers/Ковалевская-mob.png 767w, img/teachers/Ковалевская.png 1920w" size="(max-width: 767px) 800px, (min-width: 768px)" src="img/teachers/Ковалевская.png" alt=""/></div>
+              <div class="teachers__photo"><img srcset="img/teachers/Ковалевская-mob.png 767w, img/teachers/Ковалевская.png 1920w" sizes="(max-width: 767px) 200px,(min-width: 768px) 1000px" src="img/teachers/Ковалевская.png" alt=""/></div>
             </div>
             <div class="teachers__item" style="background-color: #ffecd6" data-class="10" data-prof="social">
               <div class="teachers__descr">
@@ -1623,7 +1387,7 @@
                   <div class="teachers__socList"><a href="http://vk.com" target="_blank"><img src="img/vk-link.svg" alt=""/></a><a href="http://instagram.com" target="_blank"><img src="img/insta-link.svg" alt=""/></a></div>
                 </div>
               </div>
-              <div class="teachers__photo"><img srcset="img/teachers/Малова-mob.png 767w, img/teachers/Малова.png 1920w" size="(max-width: 767px) 800px, (min-width: 768px)" src="img/teachers/Малова.png" alt=""/></div>
+              <div class="teachers__photo"><img srcset="img/teachers/Малова-mob.png 767w, img/teachers/Малова.png 1920w" sizes="(max-width: 767px) 200px,(min-width: 768px) 1000px" src="img/teachers/Малова.png" alt=""/></div>
             </div>
             <div class="teachers__item" style="background-color: #d9f7ec" data-class="10" data-prof="literature">
               <div class="teachers__descr">
@@ -1652,7 +1416,7 @@
                   <div class="teachers__socList"><a href="http://vk.com" target="_blank"><img src="img/vk-link.svg" alt=""/></a><a href="http://instagram.com" target="_blank"><img src="img/insta-link.svg" alt=""/></a></div>
                 </div>
               </div>
-              <div class="teachers__photo"><img srcset="img/teachers/Князева-mob.png 767w, img/teachers/Князева.png 1920w" size="(max-width: 767px) 800px, (min-width: 768px)" src="img/teachers/Князева.png" alt=""/></div>
+              <div class="teachers__photo"><img srcset="img/teachers/Князева-mob.png 767w, img/teachers/Князева.png 1920w" sizes="(max-width: 767px) 200px,(min-width: 768px) 1000px" src="img/teachers/Князева.png" alt=""/></div>
             </div>
             <div class="teachers__item" style="background-color: #ffd6c7" data-class="10" data-prof="russian">
               <div class="teachers__descr">
@@ -1681,7 +1445,7 @@
                   <div class="teachers__socList"><a href="http://vk.com" target="_blank"><img src="img/vk-link.svg" alt=""/></a><a href="http://instagram.com" target="_blank"><img src="img/insta-link.svg" alt=""/></a></div>
                 </div>
               </div>
-              <div class="teachers__photo"><img srcset="img/teachers/Долгих-mob.png 767w, img/teachers/Долгих.png 1920w" size="(max-width: 767px) 800px, (min-width: 768px)" src="img/teachers/Долгих.png" alt=""/></div>
+              <div class="teachers__photo"><img srcset="img/teachers/Долгих-mob.png 767w, img/teachers/Долгих.png 1920w" sizes="(max-width: 767px) 200px,(min-width: 768px) 1000px" src="img/teachers/Долгих.png" alt=""/></div>
             </div>
             <div class="teachers__item" style="background-color: #d6ebff" data-class="11" data-prof="mathematics">
               <div class="teachers__descr">
@@ -1710,7 +1474,7 @@
                   <div class="teachers__socList"><a href="http://vk.com" target="_blank"><img src="img/vk-link.svg" alt=""/></a><a href="http://instagram.com" target="_blank"><img src="img/insta-link.svg" alt=""/></a></div>
                 </div>
               </div>
-              <div class="teachers__photo"><img srcset="img/teachers/Антипов-mob.png 767w, img/teachers/Антипов.png 1920w" size="(max-width: 767px) 800px, (min-width: 768px)" src="img/teachers/Антипов.png" alt=""/></div>
+              <div class="teachers__photo"><img srcset="img/teachers/Антипов-mob.png 767w, img/teachers/Антипов.png 1920w" sizes="(max-width: 767px) 200px,(min-width: 768px) 1000px" src="img/teachers/Антипов.png" alt=""/></div>
             </div>
             <div class="teachers__item" style="background-color: #d6ebff" data-class="9" data-prof="physics">
               <div class="teachers__descr">
@@ -1739,7 +1503,7 @@
                   <div class="teachers__socList"><a href="http://vk.com" target="_blank"><img src="img/vk-link.svg" alt=""/></a><a href="http://instagram.com" target="_blank"><img src="img/insta-link.svg" alt=""/></a></div>
                 </div>
               </div>
-              <div class="teachers__photo"><img srcset="img/teachers/Тесла-mob.png 767w, img/teachers/Тесла.png 1920w" size="(max-width: 767px) 800px, (min-width: 768px)" src="img/teachers/Тесла.png" alt=""/></div>
+              <div class="teachers__photo"><img srcset="img/teachers/Тесла-mob.png 767w, img/teachers/Тесла.png 1920w" sizes="(max-width: 767px) 200px,(min-width: 768px) 1000px" src="img/teachers/Тесла.png" alt=""/></div>
             </div>
             <div class="teachers__item" style="background-color: #eae1f4" data-class="11" data-prof="mathematics">
               <div class="teachers__descr">
@@ -1768,7 +1532,7 @@
                   <div class="teachers__socList"><a href="http://vk.com" target="_blank"><img src="img/vk-link.svg" alt=""/></a><a href="http://instagram.com" target="_blank"><img src="img/insta-link.svg" alt=""/></a></div>
                 </div>
               </div>
-              <div class="teachers__photo"><img srcset="img/teachers/Чагин-mob.png 767w, img/teachers/Чагин.png 1920w" size="(max-width: 767px) 800px, (min-width: 768px)" src="img/teachers/Чагин.png" alt=""/></div>
+              <div class="teachers__photo"><img srcset="img/teachers/Чагин-mob.png 767w, img/teachers/Чагин.png 1920w" sizes="(max-width: 767px) 200px,(min-width: 768px) 1000px" src="img/teachers/Чагин.png" alt=""/></div>
             </div>
             <div class="teachers__item" style="background-color: #eae1f4" data-class="10" data-prof="mathematics">
               <div class="teachers__descr">
@@ -1797,7 +1561,7 @@
                   <div class="teachers__socList"><a href="http://vk.com" target="_blank"><img src="img/vk-link.svg" alt=""/></a><a href="http://instagram.com" target="_blank"><img src="img/insta-link.svg" alt=""/></a></div>
                 </div>
               </div>
-              <div class="teachers__photo"><img srcset="img/teachers/Майер-mob.png 767w, img/teachers/Майер.png 1920w" size="(max-width: 767px) 800px, (min-width: 768px)" src="img/teachers/Майер.png" alt=""/></div>
+              <div class="teachers__photo"><img srcset="img/teachers/Майер-mob.png 767w, img/teachers/Майер.png 1920w" sizes="(max-width: 767px) 200px,(min-width: 768px) 1000px" src="img/teachers/Майер.png" alt=""/></div>
             </div>
             <div class="teachers__item" style="background-color: #d0daff" data-class="10" data-prof="mathematics">
               <div class="teachers__descr">
@@ -1826,7 +1590,7 @@
                   <div class="teachers__socList"><a href="http://vk.com" target="_blank"><img src="img/vk-link.svg" alt=""/></a><a href="http://instagram.com" target="_blank"><img src="img/insta-link.svg" alt=""/></a></div>
                 </div>
               </div>
-              <div class="teachers__photo"><img srcset="img/teachers/Соколова-mob.png 767w, img/teachers/Соколова.png 1920w" size="(max-width: 767px) 800px, (min-width: 768px)" src="img/teachers/Соколова.png" alt=""/></div>
+              <div class="teachers__photo"><img srcset="img/teachers/Соколова-mob.png 767w, img/teachers/Соколова.png 1920w" sizes="(max-width: 767px) 200px,(min-width: 768px) 1000px" src="img/teachers/Соколова.png" alt=""/></div>
             </div>
             <div class="teachers__item" style="background-color: #d0daff" data-class="11" data-prof="english">
               <div class="teachers__descr">
@@ -1855,7 +1619,7 @@
                   <div class="teachers__socList"><a href="http://vk.com" target="_blank"><img src="img/vk-link.svg" alt=""/></a><a href="http://instagram.com" target="_blank"><img src="img/insta-link.svg" alt=""/></a></div>
                 </div>
               </div>
-              <div class="teachers__photo"><img srcset="img/teachers/Миронова-mob.png 767w, img/teachers/Миронова.png 1920w" size="(max-width: 767px) 800px, (min-width: 768px)" src="img/teachers/Миронова.png" alt=""/></div>
+              <div class="teachers__photo"><img srcset="img/teachers/Миронова-mob.png 767w, img/teachers/Миронова.png 1920w" sizes="(max-width: 767px) 200px,(min-width: 768px) 1000px" src="img/teachers/Миронова.png" alt=""/></div>
             </div>
             <div class="teachers__item" style="background-color: #ffe9f0" data-class="9" data-prof="deutsche">
               <div class="teachers__descr">
@@ -1884,7 +1648,7 @@
                   <div class="teachers__socList"><a href="http://vk.com" target="_blank"><img src="img/vk-link.svg" alt=""/></a><a href="http://instagram.com" target="_blank"><img src="img/insta-link.svg" alt=""/></a></div>
                 </div>
               </div>
-              <div class="teachers__photo"><img srcset="img/teachers/Ларионова-mob.png 767w, img/teachers/Ларионова.png 1920w" size="(max-width: 767px) 800px, (min-width: 768px)" src="img/teachers/Ларионова.png" alt=""/></div>
+              <div class="teachers__photo"><img srcset="img/teachers/Ларионова-mob.png 767w, img/teachers/Ларионова.png 1920w" sizes="(max-width: 767px) 200px,(min-width: 768px) 1000px" src="img/teachers/Ларионова.png" alt=""/></div>
             </div>
             <div class="teachers__item" style="background-color: #e2f4cd" data-class="9" data-prof="mathematics">
               <div class="teachers__descr">
@@ -1913,7 +1677,7 @@
                   <div class="teachers__socList"><a href="http://vk.com" target="_blank"><img src="img/vk-link.svg" alt=""/></a><a href="http://instagram.com" target="_blank"><img src="img/insta-link.svg" alt=""/></a></div>
                 </div>
               </div>
-              <div class="teachers__photo"><img srcset="img/teachers/Неизвестный-mob.png 767w, img/teachers/Неизвестный.png 1920w" size="(max-width: 767px) 800px, (min-width: 768px)" src="img/teachers/Неизвестный.png" alt=""/></div>
+              <div class="teachers__photo"><img srcset="img/teachers/Неизвестный-mob.png 767w, img/teachers/Неизвестный.png 1920w" sizes="(max-width: 767px) 200px,(min-width: 768px) 1000px" src="img/teachers/Неизвестный.png" alt=""/></div>
             </div>
             <div class="teachers__item" style="background-color: #e2f4cd" data-class="9" data-prof="biology">
               <div class="teachers__descr">
@@ -1942,7 +1706,7 @@
                   <div class="teachers__socList"><a href="http://vk.com" target="_blank"><img src="img/vk-link.svg" alt=""/></a><a href="http://instagram.com" target="_blank"><img src="img/insta-link.svg" alt=""/></a></div>
                 </div>
               </div>
-              <div class="teachers__photo"><img srcset="img/teachers/Казанская-mob.png 767w, img/teachers/Казанская.png 1920w" size="(max-width: 767px) 800px, (min-width: 768px)" src="img/teachers/Казанская.png" alt=""/></div>
+              <div class="teachers__photo"><img srcset="img/teachers/Казанская-mob.png 767w, img/teachers/Казанская.png 1920w" sizes="(max-width: 767px) 200px,(min-width: 768px) 1000px" src="img/teachers/Казанская.png" alt=""/></div>
             </div>
             <div class="teachers__item" style="background-color: #ffd6c9" data-class="10" data-prof="mathematics">
               <div class="teachers__descr">
@@ -1971,7 +1735,7 @@
                   <div class="teachers__socList"><a href="http://vk.com" target="_blank"><img src="img/vk-link.svg" alt=""/></a><a href="http://instagram.com" target="_blank"><img src="img/insta-link.svg" alt=""/></a></div>
                 </div>
               </div>
-              <div class="teachers__photo"><img srcset="img/teachers/Вернадская-mob.png 767w, img/teachers/Вернадская.png 1920w" size="(max-width: 767px) 800px, (min-width: 768px)" src="img/teachers/Вернадская.png" alt=""/></div>
+              <div class="teachers__photo"><img srcset="img/teachers/Вернадская-mob.png 767w, img/teachers/Вернадская.png 1920w" sizes="(max-width: 767px) 200px,(min-width: 768px) 1000px" src="img/teachers/Вернадская.png" alt=""/></div>
             </div>
             <div class="teachers__item" style="background-color: #fccfcd" data-class="11" data-prof="history">
               <div class="teachers__descr">
@@ -2000,7 +1764,7 @@
                   <div class="teachers__socList"><a href="http://vk.com" target="_blank"><img src="img/vk-link.svg" alt=""/></a><a href="http://instagram.com" target="_blank"><img src="img/insta-link.svg" alt=""/></a></div>
                 </div>
               </div>
-              <div class="teachers__photo"><img srcset="img/teachers/Виноградова-mob.png 767w, img/teachers/Виноградова.png 1920w" size="(max-width: 767px) 800px, (min-width: 768px)" src="img/teachers/Виноградова.png" alt=""/></div>
+              <div class="teachers__photo"><img srcset="img/teachers/Виноградова-mob.png 767w, img/teachers/Виноградова.png 1920w" sizes="(max-width: 767px) 200px,(min-width: 768px) 1000px" src="img/teachers/Виноградова.png" alt=""/></div>
             </div>
             <div class="teachers__item" style="background-color: #d9fce1" data-class="10" data-prof="informatics">
               <div class="teachers__descr">
@@ -2029,7 +1793,7 @@
                   <div class="teachers__socList"><a href="http://vk.com" target="_blank"><img src="img/vk-link.svg" alt=""/></a><a href="http://instagram.com" target="_blank"><img src="img/insta-link.svg" alt=""/></a></div>
                 </div>
               </div>
-              <div class="teachers__photo"><img srcset="img/teachers/Ланская-mob.png 767w, img/teachers/Ланская.png 1920w" size="(max-width: 767px) 800px, (min-width: 768px)" src="img/teachers/Ланская.png" alt=""/></div>
+              <div class="teachers__photo"><img srcset="img/teachers/Ланская-mob.png 767w, img/teachers/Ланская.png 1920w" sizes="(max-width: 767px) 200px,(min-width: 768px) 1000px" src="img/teachers/Ланская.png" alt=""/></div>
             </div>
           </div>
           <div class="teachers__sliderInfo mobile">Листай вправо, чтобы посмотреть всех преподавателей</div>
@@ -2218,27 +1982,31 @@
       </section>
       <!-- end performance-->
       <!-- begin app-->
-      <section class="app section" id="app">
-        <div class="container_center">
-          <div class="app__content">
-            <div class="app__left">
-              <h2 class="section__title">Мобильное приложение — вы можете продолжать готовиться, даже <br>если рядом нет компьютера</h2>
-              <div class="app__list">
-                <div class="app__item">
-                  <div class="app__img"><img src="img/app-mobile.png" alt=""/></div>
-                  <div class="app__text">Весь функционал платформы в мобильном приложении</div>
-                </div>
-                <div class="app__item">
-                  <div class="app__img"><img src="img/app-chat.png" alt=""/></div>
-                  <div class="app__text">Онлайн-чат, в котором вы можете задавать вопросы кураторам</div>
-                </div>
-              </div>
-              <div class="app__markets"><a href="http://" target="_blank"><img src="img/google-play.svg" alt=""/></a><a href="http://" target="_blank"><img src="img/app-store.svg" alt=""/></a></div>
-            </div>
-            <div class="app__right"><img src="img/app-phone.png" alt=""/></div>
-          </div>
-        </div>
-      </section>
+      <!-- section#app.app.section
+      .container_center
+          .app__content
+              .app__left
+                  h2.section__title Мобильное приложение — вы можете продолжать готовиться, даже <br>если рядом нет компьютера
+                  .app__list
+                      .app__item
+                          .app__img
+                              img(src="img/app-mobile.png", alt="")
+                          .app__text Весь функционал платформы в мобильном приложении
+                      .app__item
+                          .app__img
+                              img(src="img/app-chat.png", alt="")
+                          .app__text Онлайн-чат, в котором вы можете задавать вопросы кураторам
+      
+                  .app__markets
+                      a(href="http://", target="_blank")
+                          img(src="img/google-play.svg", alt="")
+                      a(href="http://", target="_blank")
+                          img(src="img/app-store.svg", alt="")
+      
+              .app__right
+                  img(src="img/app-phone.png", alt="")
+      
+      -->
       <!-- end app-->
       <!-- begin reviews-->
       <section class="reviews section" id="reviews">
@@ -2247,7 +2015,7 @@
             <h2 class="section__title">Все тысячи отзывов, <br>которые есть про нас <br>в интернете — реальные</h2>
             <div class="reviews__info">
               <p>Недавно мы опросили учеников и попросили оценить нас по ряду параметров</p>
-              <p>Итоговый средний балл по оценкам учеников<span class="reviews__rate">9,9 <small>из 10</small></span></p><a class="reviews__show" href="#" target="_blank">Посмотреть полные результаты опроса</a>
+              <p>Итоговый средний балл по оценкам учеников<span class="reviews__rate">9,9 <small>из 10</small></span></p><a class="reviews__show" href="#" data-toggle="modal" data-target="#getInfo">Посмотреть полные результаты опроса</a>
             </div>
           </div>
           <div class="reviews__content">
@@ -2514,16 +2282,17 @@
             </div>
             <div class="getFree__right">
               <form class="form" action="send.php">
+                <input type="hidden" name="subject" value="Доступ к первым бесплатным занятиям"/>
                 <div class="form__title">Заполните форму <b>и получите доступ к первым бесплатным занятиям</b></div>
                 <div class="form__sub">Сразу после заполнения формы вы попадете на платформу и вам позвонит персональный менеджер</div>
                 <div class="form__row">
-                  <input type="text" placeholder="Ваше имя" required="required"/><i class="icon_user"></i>
+                  <input type="text" placeholder="Ваше имя" name="name" required="required"/><i class="icon_user"></i>
                 </div>
                 <div class="form__row">
-                  <input type="tel" placeholder="+7" required="required"/><i class="icon_phone"></i>
+                  <input type="tel" placeholder="+7" name="tel" required="required"/><i class="icon_phone"></i>
                 </div>
                 <div class="form__row">
-                  <input type="email" placeholder="E-mail" required="required"/><i class="icon_mail"></i>
+                  <input type="email" placeholder="E-mail" name="email" required="required"/><i class="icon_mail"></i>
                 </div>
                 <div class="form__action">
                   <button class="btn btn_success" type="submit">Получить бесплатные занятия</button>
@@ -2577,16 +2346,17 @@
             </div>
             <div class="getFree__right">
               <form class="form" action="send.php">
+                <input type="hidden" name="subject" value="Доступ к первым бесплатным занятиям"/>
                 <div class="form__title">Заполните форму <b>и получите доступ к первым бесплатным занятиям</b></div>
                 <div class="form__sub">Сразу после заполнения формы вы попадете на платформу и вам позвонит персональный менеджер</div>
                 <div class="form__row">
-                  <input type="text" placeholder="Ваше имя" required="required"/><i class="icon_user"></i>
+                  <input type="text" placeholder="Ваше имя" name="name" required="required"/><i class="icon_user"></i>
                 </div>
                 <div class="form__row">
-                  <input type="tel" placeholder="+7" required="required"/><i class="icon_phone"></i>
+                  <input type="tel" placeholder="+7" name="tel" required="required"/><i class="icon_phone"></i>
                 </div>
                 <div class="form__row">
-                  <input type="email" placeholder="E-mail" required="required"/><i class="icon_mail"></i>
+                  <input type="email" placeholder="E-mail" name="email" required="required"/><i class="icon_mail"></i>
                 </div>
                 <div class="form__action">
                   <button class="btn btn_success" type="submit">Получить бесплатные занятия</button>
@@ -2606,16 +2376,17 @@
       <div class="modal fade callbackForm" id="callbackForm">
         <div class="modal-dialog"><a class="modal-close" href="#" data-dismiss="modal"></a>
           <form class="form" action="send.php">
+            <input type="hidden" name="subject" value="Заказ обратного звонка"/>
             <div class="form__title"> <b>Заполните форму </b>и наш менеджер перезвонит вам в течение 30 минут</div>
             <div class="form__sub">Сразу после заполнения формы вы попадете на платформу и вам позвонит персональный менеджер</div>
             <div class="form__row">
-              <input type="text" placeholder="Ваше имя" required="required"/><i class="icon_user"></i>
+              <input type="text" placeholder="Ваше имя" name="name" required="required"/><i class="icon_user"></i>
             </div>
             <div class="form__row">
-              <input type="tel" placeholder="+7" required="required"/><i class="icon_phone"></i>
+              <input type="tel" placeholder="+7" name="tel" required="required"/><i class="icon_phone"></i>
             </div>
             <div class="form__row">
-              <input type="email" placeholder="E-mail" required="required"/><i class="icon_mail"></i>
+              <input type="email" placeholder="E-mail" name="email" required="required"/><i class="icon_mail"></i>
             </div>
             <div class="form__action">
               <button class="btn btn_success" type="submit">Заказать звонок</button>
@@ -2625,14 +2396,116 @@
         </div>
       </div>
       <!-- End modal callbackForm-->
+      <!-- End modal masterGroup-->
+      <!-- Begin Modal modalInfo-->
+      <div class="modal fade modalInfo" id="modalInfo">
+        <div class="modal-dialog">
+          <div class="modal-title">Как мы вычисляли средний балл?</div><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-content">
+            <p>В конце каждого года мы проводим масштабный опрос наших учеников.</p>
+            <p>По результатам опроса выпускников 2019 года этот средний балл равен 83. Интересный факт из статистики: чем дольше ученик занимался в нашей школе, тем выше у него результат.</p>
+          </div>
+        </div>
+      </div>
+      <!-- End modal modalInfo-->
+      <!-- Button trigger modal getProgram-->
+      <!-- Begin Modal getProgram-->
+      <div class="modal fade getProgram" id="getProgram-1">
+        <div class="modal-dialog"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-content">
+            <div class="getProgram__header">
+              <div class="getProgram__img"><img src="img/choosen-pay-2.png" alt=""/></div>
+              <div class="getProgram__descr">
+                <div class="getProgram__name">МГ Стандарт</div>
+                <div class="getProgram__prof">Профильная математика</div>
+                <div class="getProgram__price">2 950 ₽</div>
+              </div>
+            </div>
+            <div class="getProgram__text">В плане быстродействия скриптовые языки можно разделить на языки динамического разбора и предварительно компилируемые. Языки динамического разбора считывают инструкции из файла программы минимально требующимися блоками, и исполняют эти блоки, не читая дальнейший код. </div>
+            <div class="getProgram__more" data-toggle="modal" data-target="#masterGroup">Сравнить тарифы</div>
+            <div class="getProgram__action"><a class="btn btn_success" href="#">оплатить</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal getProgram-->
+      <!-- Begin Modal getProgram-->
+      <div class="modal fade getProgram" id="getProgram-2">
+        <div class="modal-dialog"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-content">
+            <div class="getProgram__header">
+              <div class="getProgram__img"><img src="img/choosen-pay-3.png" alt=""/></div>
+              <div class="getProgram__descr">
+                <div class="getProgram__name">МГ Про</div>
+                <div class="getProgram__prof">Профильная математика</div>
+                <div class="getProgram__price">3 650 ₽</div>
+              </div>
+            </div>
+            <div class="getProgram__text">В плане быстродействия скриптовые языки можно разделить на языки динамического разбора и предварительно компилируемые. Языки динамического разбора считывают инструкции из файла программы минимально требующимися блоками, и исполняют эти блоки, не читая дальнейший код. </div>
+            <div class="getProgram__more" data-toggle="modal" data-target="#masterGroup">Сравнить тарифы</div>
+            <div class="getProgram__action"><a class="btn btn_success" href="#">оплатить</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal getProgram-->
+      <!-- Begin Modal getProgram-->
+      <div class="modal fade getProgram" id="getProgram-3">
+        <div class="modal-dialog"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-content">
+            <div class="getProgram__header">
+              <div class="getProgram__img"><img src="img/choosen-pay-4.png" alt=""/></div>
+              <div class="getProgram__descr">
+                <div class="getProgram__name">МГ Хард</div>
+                <div class="getProgram__prof">Профильная математика</div>
+                <div class="getProgram__price">3 750 ₽</div>
+              </div>
+            </div>
+            <div class="getProgram__text">В плане быстродействия скриптовые языки можно разделить на языки динамического разбора и предварительно компилируемые. Языки динамического разбора считывают инструкции из файла программы минимально требующимися блоками, и исполняют эти блоки, не читая дальнейший код. </div>
+            <div class="getProgram__more" data-toggle="modal" data-target="#masterGroup">Сравнить тарифы</div>
+            <div class="getProgram__action"><a class="btn btn_success" href="#">оплатить</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal getProgram-->
+      <!-- Begin Modal getProgram-->
+      <div class="modal fade getProgram getProgram_free" id="getProgram-free">
+        <div class="modal-dialog"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-content">
+            <div class="getProgram__header">
+              <div class="getProgram__img"><img src="img/choosen-pay-6.png" alt=""/></div>
+              <div class="getProgram__descr">
+                <div class="getProgram__name"><b>Бесплатная неделя</b></div>
+                <div class="getProgram__prof">Профильная математика</div>
+              </div>
+            </div>
+            <div class="getProgram__text">В плане быстродействия скриптовые языки можно разделить на языки динамического разбора и предварительно компилируемые. Языки динамического разбора считывают инструкции из файла программы минимально требующимися блоками, и исполняют эти блоки, не читая дальнейший код. </div>
+            <div class="getProgram__action"><a class="btn btn_primary" href="#" data-toggle="modal" data-target="#free">Бесплатная неделя</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal getProgram-->
+      <!-- Begin Modal getProgram-->
+      <div class="modal fade getInfo" id="getInfo">
+        <div class="modal-dialog"><a class="modal-close" href="#" data-dismiss="modal"></a>
+          <div class="modal-content">
+            <div class="getInfo__content">
+              <div class="getInfo__left">
+                <div class="getInfo__title">Что такое скрипт?</div>
+                <div class="getInfo__text">В плане быстродействия скриптовые языки можно разделить на языки динамического разбора и предварительно компилируемые. Языки динамического разбора считывают инструкции из файла программы минимально требующимися блоками, и исполняют эти блоки, не читая дальнейший код. Предкомпилируемые языки транслируют всю программу в байт-код и затем исполняют его. Некоторые скриптовые языки имеют возможность компиляции программы «на лету» в машинный код.</div>
+              </div>
+              <div class="getInfo__right"><img class="desktop" src="img/getInfo.png" alt=""/><a href="#" target="_blank">Смотреть полный отчет</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End modal getProgram-->
       <div class="modal fade masterGroup" id="masterGroup">
         <div class="modal-dialog">
           <div class="modal-title">Все мастер-группы онлайн-школы «Умскул»</div><a class="modal-close" href="#" data-dismiss="modal"></a>
           <div class="modal-content">
-            <div class="masterGroup__table">
+            <div class="masterGroup__table desktop">
               <div class="masterGroup__head">
                 <div class="masterGroup__col">
-                  <div class="masterGroup__title">ЕГО 2020</div>
+                  <div class="masterGroup__title">ЕГЭ 2020</div>
                 </div>
                 <div class="masterGroup__col">
                   <div class="masterGroup__label">мастер-группа</div>
@@ -2732,10 +2605,209 @@
                 <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
               </div>
             </div>
+            <div class="mobile">
+              <div class="masterGroup__item" style="background: #FFE6AF">
+                <div class="masterGroup__header"><img src="img/choosen-pay-2.png" alt=""/>
+                  <div class="masterGroup__descr">
+                    <div class="masterGroup__label">мастер-группа</div>
+                    <div class="masterGroup__name">Стандарт</div>
+                  </div>
+                </div>
+                <div class="masterGroup__table">
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">12 онлайн-занятий</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Записи занятий</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Домашние задания</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Подсказки к Д/З</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Образовательная платформа</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Персональный менеджер</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Онлайн-куратор (отвечает за 3 мин.)</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Программа лояльности</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Личный куратор ПРО</div>
+                    <div class="masterGroup__col"><img src="img/false.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Мягкий контроль</div>
+                    <div class="masterGroup__col"><img src="img/false.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Жесткий контроль</div>
+                    <div class="masterGroup__col"><img src="img/false.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Система жизней</div>
+                    <div class="masterGroup__col"><img src="img/false.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Возможность вылететь</div>
+                    <div class="masterGroup__col"><img src="img/false.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">×3 программа лояльности</div>
+                    <div class="masterGroup__col"><img src="img/false.svg" alt=""/></div>
+                  </div>
+                </div>
+              </div>
+              <div class="masterGroup__item" style="background: #FEDAF6">
+                <div class="masterGroup__header"><img src="img/choosen-pay-3.png" alt=""/>
+                  <div class="masterGroup__descr">
+                    <div class="masterGroup__label">мастер-группа</div>
+                    <div class="masterGroup__name">Про</div>
+                  </div>
+                </div>
+                <div class="masterGroup__table">
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">12 онлайн-занятий</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Записи занятий</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Домашние задания</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Подсказки к Д/З</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Образовательная платформа</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Персональный менеджер</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Онлайн-куратор (отвечает за 3 мин.)</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Программа лояльности</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Личный куратор ПРО</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Мягкий контроль</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Жесткий контроль</div>
+                    <div class="masterGroup__col"><img src="img/false.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Система жизней</div>
+                    <div class="masterGroup__col"><img src="img/false.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Возможность вылететь</div>
+                    <div class="masterGroup__col"><img src="img/false.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">×3 программа лояльности</div>
+                    <div class="masterGroup__col"><img src="img/false.svg" alt=""/></div>
+                  </div>
+                </div>
+              </div>
+              <div class="masterGroup__item" style="background: #FFC6BB">
+                <div class="masterGroup__header"><img src="img/choosen-pay-4.png" alt=""/>
+                  <div class="masterGroup__descr">
+                    <div class="masterGroup__label">мастер-группа</div>
+                    <div class="masterGroup__name">Хард</div>
+                  </div>
+                </div>
+                <div class="masterGroup__table">
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">12 онлайн-занятий</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Записи занятий</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Домашние задания</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Подсказки к Д/З</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Образовательная платформа</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Персональный менеджер</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Онлайн-куратор (отвечает за 3 мин.)</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Программа лояльности</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Личный куратор ПРО</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Мягкий контроль</div>
+                    <div class="masterGroup__col"><img src="img/false.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Жесткий контроль</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Система жизней</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">Возможность вылететь</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                  <div class="masterGroup__row">
+                    <div class="masterGroup__col">×3 программа лояльности</div>
+                    <div class="masterGroup__col"><img src="img/true.svg" alt=""/></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- End modal masterGroup-->
     </main>
     <footer class="footer">
       <div class="container_center">
@@ -2786,6 +2858,7 @@
     <script src="js/modal.js"></script>
     <script src="js/jquery.inputmask.min.js"></script>
     <script src="js/jquery.scrollbar.min.js"></script>
-    <script src="js/function.js?0.9"></script>
+    <script src="js/tooltipster.bundle.min.js"></script>
+    <script src="js/function.js?1.3"></script>
   </body>
 </html>

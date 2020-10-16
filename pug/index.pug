@@ -29,7 +29,13 @@ block content
                 .profits__item
                     .profits__number 83
                     .profits__name Средний балл
-                        img(src="img/info.png", alt="")
+                        img.tooltip(src="img/info.png",  data-tooltip-content="#tooltip_content" title="")
+                        <div class="tooltip_templates">
+                            <span id="tooltip_content">
+                                |В конце каждого года мы проводим масштабный опрос наших учеников. <br>По результатам опроса выпускников 2019 года этот средний балл равен 83. Интересный факт из статистики: чем дольше ученик занимался в нашей школе, тем выше у него результат.
+                            </span>
+                        </div>
+                        //- img.tooltip(src="img/info.png", alt="" data-toggle="modal" data-target="#modalInfo")
 
     // end profits
 
@@ -96,17 +102,18 @@ block content
         .choosen__pay
             .choosen__payLabel Оплатить мастер-группу:
             .choosen__payList
-                each pay, i in [{name: 'МГ Лайт', b: '1 500 ₽'}, {name: 'МГ Стандарт', b: '2 950 ₽'}, {name: 'МГ Про', b: '3 650 ₽'}, {name: 'МГ Хард', b: '3 750 ₽'}, {name: 'МГ Премиум', b: '4 500 ₽'}, {name: '', b: 'Бесплатная неделя'}, ]
-                    if i === 5
-                        .choosen__payItem.choosen__payItem_free
+                //- each pay, i in [{name: 'МГ Лайт', b: '1 500 ₽'}, {name: 'МГ Стандарт', b: '2 950 ₽'}, {name: 'МГ Про', b: '3 650 ₽'}, {name: 'МГ Хард', b: '3 750 ₽'}, {name: 'МГ Премиум', b: '4 500 ₽'}, {name: '', b: 'Бесплатная неделя'}, ]
+                each pay, i in [{name: 'МГ Стандарт', b: '2 950 ₽'}, {name: 'МГ Про', b: '3 650 ₽'}, {name: 'МГ Хард', b: '3 750 ₽'}, {name: '', b: 'Бесплатная неделя'}, ]
+                    if i === 3
+                        .choosen__payItem.choosen__payItem_free(data-toggle="modal" data-target="#getProgram-free")
                             .choosen__payImg
-                                img(src="img/choosen-pay-"+(i+1)+".png", alt="")
+                                img(src="img/choosen-pay-6.png", alt="")
                             .choosen__payText
                                 b= pay.b
                     else
-                        .choosen__payItem
+                        .choosen__payItem(data-toggle="modal" data-target="#getProgram-"+(i+1)+"")
                             .choosen__payImg
-                                img(src="img/choosen-pay-"+(i+1)+".png", alt="")
+                                img(src="img/choosen-pay-"+(i+2)+".png", alt="")
                             .choosen__payText= pay.name 
                                 b= pay.b
 
@@ -288,7 +295,7 @@ block content
     // end performance
 
     // begin app
-    section#app.app.section
+    // section#app.app.section
         .container_center
             .app__content
                 .app__left
@@ -324,7 +331,7 @@ block content
                     p Итоговый средний балл по оценкам учеников
                         span.reviews__rate 9,9 
                             small из 10
-                    a.reviews__show(href="#" target="_blank") Посмотреть полные результаты опроса
+                    a.reviews__show(href="#" data-toggle="modal" data-target="#getInfo") Посмотреть полные результаты опроса
 
             .reviews__content
                 .reviews__tabs
@@ -432,24 +439,129 @@ block content
         .modal-dialog
             a(href="#" class="modal-close" data-dismiss="modal")
             form.form(action="send.php")
+                input(type="hidden" name="subject" value="Заказ обратного звонка")
                 .form__title 
                     b Заполните форму 
                     |и наш менеджер перезвонит вам в течение 30 минут
                 .form__sub Сразу после заполнения формы вы попадете на платформу и вам позвонит персональный менеджер
                 .form__row
-                    input(type="text", placeholder="Ваше имя" required)
+                    input(type="text", placeholder="Ваше имя" name="name" required)
                     i.icon_user
                 .form__row
-                    input(type="tel", placeholder="+7" required)
+                    input(type="tel", placeholder="+7" name="tel" required)
                     i.icon_phone
                 .form__row
-                    input(type="email", placeholder="E-mail" required)
+                    input(type="email", placeholder="E-mail" name="email" required)
                     i.icon_mail
                 .form__action
                     button.btn.btn_success(type="submit") Заказать звонок
                 .form__privacy Нажимая на кнопку, вы принимаете 
                     a(href="#") условия обработки данных
     // End modal callbackForm
+
+
+    // End modal masterGroup
+
+    //- // Button trigger modal modalInfo
+    //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modalInfo") Click to open modal
+    // Begin Modal modalInfo
+    .modal.fade.modalInfo#modalInfo
+        .modal-dialog
+            .modal-title Как мы вычисляли средний балл?
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-content
+                p В конце каждого года мы проводим масштабный опрос наших учеников.
+                p По результатам опроса выпускников 2019 года этот средний балл равен 83. Интересный факт из статистики: чем дольше ученик занимался в нашей школе, тем выше у него результат.
+
+    // End modal modalInfo
+
+
+    // Button trigger modal getProgram
+    //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#getProgram") Click to open modal
+    // Begin Modal getProgram
+    .modal.fade.getProgram#getProgram-1
+        .modal-dialog
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-content
+                .getProgram__header
+                    .getProgram__img
+                        img(src="img/choosen-pay-2.png", alt="")
+                    .getProgram__descr
+                        .getProgram__name МГ Стандарт
+                        .getProgram__prof Профильная математика
+                        .getProgram__price 2 950 ₽
+                .getProgram__text В плане быстродействия скриптовые языки можно разделить на языки динамического разбора и предварительно компилируемые. Языки динамического разбора считывают инструкции из файла программы минимально требующимися блоками, и исполняют эти блоки, не читая дальнейший код. 
+                .getProgram__more(data-toggle="modal" data-target="#masterGroup") Сравнить тарифы
+                .getProgram__action
+                    a.btn.btn_success(href="#") оплатить
+    // End modal getProgram
+
+    // Begin Modal getProgram
+    .modal.fade.getProgram#getProgram-2
+        .modal-dialog
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-content
+                .getProgram__header
+                    .getProgram__img
+                        img(src="img/choosen-pay-3.png", alt="")
+                    .getProgram__descr
+                        .getProgram__name МГ Про
+                        .getProgram__prof Профильная математика
+                        .getProgram__price 3 650 ₽
+                .getProgram__text В плане быстродействия скриптовые языки можно разделить на языки динамического разбора и предварительно компилируемые. Языки динамического разбора считывают инструкции из файла программы минимально требующимися блоками, и исполняют эти блоки, не читая дальнейший код. 
+                .getProgram__more(data-toggle="modal" data-target="#masterGroup") Сравнить тарифы
+                .getProgram__action
+                    a.btn.btn_success(href="#") оплатить
+    // End modal getProgram
+
+    // Begin Modal getProgram
+    .modal.fade.getProgram#getProgram-3
+        .modal-dialog
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-content
+                .getProgram__header
+                    .getProgram__img
+                        img(src="img/choosen-pay-4.png", alt="")
+                    .getProgram__descr
+                        .getProgram__name МГ Хард
+                        .getProgram__prof Профильная математика
+                        .getProgram__price 3 750 ₽
+                .getProgram__text В плане быстродействия скриптовые языки можно разделить на языки динамического разбора и предварительно компилируемые. Языки динамического разбора считывают инструкции из файла программы минимально требующимися блоками, и исполняют эти блоки, не читая дальнейший код. 
+                .getProgram__more(data-toggle="modal" data-target="#masterGroup") Сравнить тарифы
+                .getProgram__action
+                    a.btn.btn_success(href="#") оплатить
+    // End modal getProgram
+
+    // Begin Modal getProgram
+    .modal.fade.getProgram.getProgram_free#getProgram-free
+        .modal-dialog
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-content
+                .getProgram__header
+                    .getProgram__img
+                        img(src="img/choosen-pay-6.png", alt="")
+                    .getProgram__descr
+                        .getProgram__name
+                            b Бесплатная неделя
+                        .getProgram__prof Профильная математика
+                .getProgram__text В плане быстродействия скриптовые языки можно разделить на языки динамического разбора и предварительно компилируемые. Языки динамического разбора считывают инструкции из файла программы минимально требующимися блоками, и исполняют эти блоки, не читая дальнейший код. 
+                .getProgram__action
+                    a.btn.btn_primary(href="#" data-toggle="modal" data-target="#free") Бесплатная неделя
+    // End modal getProgram
+
+    // Begin Modal getProgram
+    .modal.fade.getInfo#getInfo
+        .modal-dialog
+            a(href="#" class="modal-close" data-dismiss="modal")
+            .modal-content
+                .getInfo__content
+                    .getInfo__left
+                        .getInfo__title Что такое скрипт?
+                        .getInfo__text В плане быстродействия скриптовые языки можно разделить на языки динамического разбора и предварительно компилируемые. Языки динамического разбора считывают инструкции из файла программы минимально требующимися блоками, и исполняют эти блоки, не читая дальнейший код. Предкомпилируемые языки транслируют всю программу в байт-код и затем исполняют его. Некоторые скриптовые языки имеют возможность компиляции программы «на лету» в машинный код.
+                    .getInfo__right
+                        img.desktop(src="img/getInfo.png", alt="")
+                        a(href="#", target="_blank") Смотреть полный отчет
+    // End modal getProgram
 
     //- // Button trigger modal masterGroup
     //- button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#masterGroup") Click to open modal
@@ -460,10 +572,10 @@ block content
             a(href="#" class="modal-close" data-dismiss="modal")
             .modal-content
                 -var group = [{name: '12 онлайн-занятий', standart: true, pro: true, hard: true}, {name: 'Записи занятий', standart: true, pro: true, hard: true}, {name: 'Домашние задания', standart: true, pro: true, hard: true}, {name: 'Подсказки к Д/З', standart: true, pro: true, hard: true}, {name: 'Образовательная платформа', standart: true, pro: true, hard: true}, {name: 'Персональный менеджер', standart: true, pro: true, hard: true}, {name: 'Онлайн-куратор (отвечает за 3 мин.)', standart: true, pro: true, hard: true}, {name: 'Программа лояльности', standart: true, pro: true, hard: true}, {name: 'Личный куратор ПРО', standart: false, pro: true, hard: true}, {name: 'Мягкий контроль', standart: false, pro: true, hard: false}, {name: 'Жесткий контроль', standart: false, pro: false, hard: true}, {name: 'Система жизней', standart: false, pro: false, hard: true}, {name: 'Возможность вылететь', standart: false, pro: false, hard: true}, {name: '×3 программа лояльности', standart: false, pro: false, hard: true}, ]
-                .masterGroup__table
+                .masterGroup__table.desktop
                     .masterGroup__head
                         .masterGroup__col
-                            .masterGroup__title ЕГО 2020
+                            .masterGroup__title ЕГЭ 2020
                         .masterGroup__col
                             .masterGroup__label мастер-группа
                             .masterGroup__name Стандарт
@@ -487,5 +599,42 @@ block content
                                 //- .masterGroup__name.mobile Хард
                                 img(src="img/"+item.hard+".svg", alt="")
 
+                .mobile
+                    .masterGroup__item(style="background: #FFE6AF")
+                        .masterGroup__header
+                            img(src="img/choosen-pay-2.png", alt="")
+                            .masterGroup__descr
+                                .masterGroup__label мастер-группа
+                                .masterGroup__name Стандарт
+                        .masterGroup__table
+                            each item in group
+                                .masterGroup__row
+                                    .masterGroup__col= item.name
+                                    .masterGroup__col
+                                        img(src="img/"+item.standart+".svg", alt="")
 
-    // End modal masterGroup
+                    .masterGroup__item(style="background: #FEDAF6")
+                        .masterGroup__header
+                            img(src="img/choosen-pay-3.png", alt="")
+                            .masterGroup__descr
+                                .masterGroup__label мастер-группа
+                                .masterGroup__name Про
+                        .masterGroup__table
+                            each item in group
+                                .masterGroup__row
+                                    .masterGroup__col= item.name
+                                    .masterGroup__col
+                                        img(src="img/"+item.pro+".svg", alt="")
+
+                    .masterGroup__item(style="background: #FFC6BB")
+                        .masterGroup__header
+                            img(src="img/choosen-pay-4.png", alt="")
+                            .masterGroup__descr
+                                .masterGroup__label мастер-группа
+                                .masterGroup__name Хард
+                        .masterGroup__table
+                            each item in group
+                                .masterGroup__row
+                                    .masterGroup__col= item.name
+                                    .masterGroup__col
+                                        img(src="img/"+item.hard+".svg", alt="")
